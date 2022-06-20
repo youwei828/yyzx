@@ -1,0 +1,27 @@
+let j   let j   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        'use strict'; //使用严格模式
+        const web = 'today';
+        console.log(web);
+        var web1 = 'sunday';
+        console.log(web1);
+        let web2 = 'Thursday';
+        console.log(web2);
+    </script>
+
+    <script !src="">
+        for (let j = 0; j < 5; j++) {      //使用let不会污染全局，var则会污染全局
+            console.log(j);
+        }
+        console.log(j);
+    </script>
+
+
+</body>
+</html>

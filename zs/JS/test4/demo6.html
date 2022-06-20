@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>解构赋值语法</title>
+        <style></style>
+    </head>
+    <body>
+        <script>
+            // 结构语法
+            let zyw = [21, 'eat'];
+            let [name, favour] = zyw;
+            console.log(name, favour);
+
+            function rangeArrary(begin, end) {
+                const array = [];
+                for (let i = begin; i <= end; i++) array.push(i);
+                return array;
+            }
+            console.log(rangeArrary(1, 5));
+        </script>
+    </body>
+</html>

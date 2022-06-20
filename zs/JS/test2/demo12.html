@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo12</title>
+</head>
+<style>
+    ul{
+        list-style: none;
+    }
+    li{
+        border:black solid 1px;
+        height: 50px;
+        width: 200px;
+    }
+</style>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<script !src="">
+    let lis = document.querySelectorAll("li");    //取页面中所有的li元素
+        for (const li of lis) {
+            li.addEventListener("click", function(e) {    //给li元素添加事件
+                li.style.backgroundColor = "red";        //当鼠标点击，li元素变成红色
+            })
+        }
+</script>
+</body>
+</html>

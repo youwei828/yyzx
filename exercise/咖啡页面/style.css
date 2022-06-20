@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;  
+    background-image: url("./coffee.jpg");
+    background-size: cover;   /*页面覆盖*/
+    background-position-y: 40%;  /*背景图片根据y轴偏移，也就是上下*/
+    font-family: sans-serif;    /*serif为字体有衬线的意思*/
+    color: #928b73;
+    /*vh是css中的一个相对长度单位，相对于视窗的高度, 视窗被均分为100单位的vh，即1vh永远等于当前视窗高度的百分之一
+    vh: 相对于视窗的高度, 视窗被均分为100单位的vh;
+    vw: 相对于视窗的宽度, 视窗被均分为100单位的vw;
+    vmax: 相对于视窗的宽度或高度中较大的那个。其中最大的那个被均分为100单位的vmax;
+    vmin: 相对于视窗的宽度或高度中较小的那个。其中最小的那个被均分为100单位的vmin;*/
+}
+nav{
+    display: flex;
+    margin-top: 2%;
+}
+.logo{
+    width: 30%;
+    margin-left:10% ;
+    font-size: 33px;
+}
+.nav-list{
+    display: flex;
+    margin-left: 7%;
+}
+.nav-list>li{
+    list-style: none;
+    margin-left: 20%;
+    font-size: 24px;
+}
+.nav-list>li>a{
+    text-decoration: none;
+    color: #9e967b;
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+}
+.nav-list>li>a:hover{
+    color: #000;
+}
+
+.main-text{
+    font-size: 36px;
+    margin-left: 33%;
+    margin-top: 15%;
+    letter-spacing: 4px;  /*字间距*/
+    word-spacing:8px;
+}
+.body-text{
+    font-size: 16px;
+    width: 36%;
+    margin-top: 2%;
+    margin-left: 33%;
+}
+.mail{
+    background-color: transparent;
+    outline: none;
+    border: 4px solid #9e967b;
+    width: 90px;
+    height: 40px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-left: 80%;
+    margin-top: 4%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}   
+
+.mail:hover{
+    background-color: #9e967b;
+    color: aliceblue;
+    border-color: aliceblue;
+}
+

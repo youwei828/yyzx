@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo7</title>
+</head>
+<body>
+    <SCRIPT>
+        //const定义常量，在同一作用域无法改变
+        const WEB = 'https://www.google.com';
+        function show(){
+            const WEB = 'https://www.google.com';
+            console.log(WEB);
+        }
+        // WEB = 'https://www.google.';   不可更改
+        show();
+
+        const CONTENT = {};
+        CONTENT.URL = 'https://www.google.com';
+        CONTENT.URl = 'wodeserver';
+        console.log(CONTENT);
+
+    </SCRIPT>
+
+
+</body>
+</html>

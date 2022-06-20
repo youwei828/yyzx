@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo4</title>
+</head>
+<body>
+    <form action="demo1.html" id = 'form' >
+        用户名：<input type="text" name="user">
+        <hr>
+        <input type="checkbox" name="copyright"> 接受使用协议
+        <hr>
+        <button>提交</button>
+    </form>
+
+    <script !src="">
+        //查找元素的方法
+        function query(el){
+            return document.querySelector(el);
+        }
+        //调用方法找form表单
+        query('#form').addEventListener('submit', function(event){
+            let user = query('[name="user"]').value.trim();    //取完值后用trim()去掉左右空格
+            let copyright = query('[name="copyright"]').checked;    //检查事件
+            if (!user || copyright == false) {
+                event.preventDefault();     //阻止事件
+                alert('请接受协议！');
+            }
+
+        });
+
+
+    </script>
+</body>
+</html>

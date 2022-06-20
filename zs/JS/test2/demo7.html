@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo7</title>
+</head>
+<body>
+<script !src="">
+    function table (options = {tr: 5, td : 3 }) {
+        document.write(`<table border="1" width="100%">`)
+        while (options.tr-- !==0) {
+            let td= options.td;     // TODO:这要记得赋值，因为每次都要初始化
+            document.write(`<tr>`);
+            while (td-- !==0) {
+                document.write(`<td>${td}</td>`);
+            }
+            document.write(`</tr>`);
+        }
+        document.write(`</table>`)
+    }
+    table({tr: 5, td: 9});        //tr是行，td是列
+</script>
+</body>
+</html>

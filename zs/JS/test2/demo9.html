@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>demo9杨辉三角</title>
+</head>
+<body>
+<style>
+    span{
+        color: aliceblue;
+} </style>
+<script !src="">
+    function demo9(row){
+        for(let i=1;i<=row;i++){
+            for (let n =row-i; n>0; n--) {
+                document.write(`<span style="color">-</span>`);
+            }
+            for (let j = i * 2 - 1; j>0; j--) {
+                document.write("z");
+            }
+            document.write("<br>");
+        }
+    }
+    demo9(20);
+</script>
+</body>
+</html>

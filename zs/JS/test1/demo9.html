@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冻结变量</title>
+</head>
+<body>
+<script>
+    const LAN = {
+        url:'hhtps://www.yyzx.com',
+        port:'8080'            //端口
+    }
+    //冻结，锁定块区域
+    Object.freeze(LAN);
+    LAN.port = '7070';         //更改块区域里const数据
+    LAN.url = 'http://';
+    console.log(LAN,LAN.port,LAN.url);
+</script>
+
+</body>
+</html>

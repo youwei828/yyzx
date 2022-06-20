@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo1</title>
+</head>
+<body>
+<input type="text" name="hd">
+<span id="msg"></span>
+<script>
+    //查找元素，命名为span
+    let sel = document.querySelector("#msg");
+
+    //查找元素，添加监听器，当键盘弹起，触发函数
+    document.querySelector('[name = "hd"]').addEventListener('keyup',function() {
+        //三元表达式可写为
+        sel.innerHTML = (this.value >=90 ?  "输入的年龄超过了90" :"输入的年龄小于90")  ;
+        console.log(this.value);    //this.value就是输入的值
+    })
+
+    /*//查找元素，命名为span
+    let sel = document.querySelector("#msg");
+
+    查找元素，添加监听器，当键盘弹起，触发函数
+    document.querySelector('[name = "hd"]').addEventListener('keyup',function() {
+        let age ='';
+        if (this.value >=90){
+            age = "输入的年龄超过了90";
+        }
+        sel.innerHTML = age;       //让msg里的内容等于sel
+    })*/
+
+
+</script>
+</body>
+</html>

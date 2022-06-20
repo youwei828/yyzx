@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo2</title>
+</head>
+<body>
+<input type="text" name="password">
+<hr>
+<input type="text" name="confirm_password">
+<hr>
+<span name="msg"></span>
+<hr>
+<script>
+    function query(name){
+        return document.querySelector(`[name="${name}"]`);     //返回标签代码本身
+    }
+    console.log(query('password'));
+    console.log(query('confirm_password'));
+
+    let inputs = document.querySelectorAll("[name='password'],[name='confirm_password']");
+    console.log(inputs);
+    [...inputs].map(item=>{
+        item.addEventListener('keyup',function(){
+            let ex1 = '';
+            // 判断两个文本框的语句是否相等
+            if(query('password').value==query("confirm_password").value||query('password')>5){
+                 ex1 = "两次密码一致";
+                query('msg').innerHTML = ex1;
+            }else{
+                 ex1 = "两次密码不一致或者密码长度小于5";
+                query('msg').innerHTML = ex1;
+            }
+
+        })
+    })
+</script>
+</body>
+
+</html>

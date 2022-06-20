@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo6</title>
+</head>
+<body>
+
+<script>
+    function div (options={}) {
+        let div = document.createElement('div');        //创建div元素
+        div.style.width = options.width ? options.width : '100px';
+        div.style.height = options.height ? options.height : '100px';
+        div.style.backgroundColor = options.bgColor ? options.bgColor : "red";
+        document.body.appendChild(div);      //将div元素添加到body里
+    }
+    div({width:'200px' , height:'100px' , bgColor:'green'});    //执行函数
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo6.html</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<script>
+    let  name = "demo77777777777";    //从最前面开始替换
+    console.log(name.replace("77777", "88888"));
+
+    let word = ['html', 'css'];
+    let str = '我喜欢学习html和css';
+    const repl = word.reduce((pre,word)=>{
+        return pre.replace(word,`<a href="#">${word}</a>`)      //执行替换
+    },str)
+        document.body.innerHTML = repl;
+
+    function phone (mobile, length=3) {
+        return String(mobile).slice(0,length * -1) + "*".repeat(length);
+    }
+    console.log(phone(15837043896))    //从最后一位数截3位，要用负号
+
+
+</script>
+</body>
+</html>

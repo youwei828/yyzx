@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>封装时间函数</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<script>
+    const date = new Date("1970-01-01 00:00:00");
+    function dateFormat(date ,format = "yyyy-MM-dd HH:mm:ss") {
+        const config = {
+            yyyy: date.getFullYear(),
+            MM: date.getMonth() + 1,
+            dd: date.getDate(),
+            HH: date.getHours(),
+            mm: date.getMinutes(),
+            ss: date.getSeconds()
+        }
+        for (const configKey in config) { //config就是yyyy等属性（键），config[configKey]就是属性值
+            format = format.replace(configKey, config[configKey]);
+        }
+        return format;
+    }
+    console.log(dateFormat(date,"yyyy年MM月"));
+
+
+</script>
+</body>
+</html>

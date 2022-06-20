@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo5</title>
+</head>
+<body>
+
+<input type="password" name="password">
+<span id = "msg"></span>
+<script !src="">
+    document.querySelector('[name="password"]').addEventListener('keyup', function(){
+        let length = this.value.length;         //获取密码的长度  this在事件中指向接收事件的元素
+        // console.log(length);
+        let span_value = document.querySelector('#msg');     //查找span元素
+        let msg = '';      //定义msg变量
+        if (length >= 10) {
+            msg = '密码大于等于10位，安全'
+        }else if(length >= 6){
+            msg = '密码大于等于6位，一般安全'
+        }else{
+            msg = '密码小于6位，不安全'
+        }
+        span_value.innerHTML = msg;         //将msg的赋值给spam_value
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签模板</title>
+</head>
+<style>
+    li>a{
+        color: #2ecc71;
+    }
+</style>
+<body>
+<script !src="">
+    let lessino =[
+        {title:"语文老师",name:"less"},
+        {title:"数学老师",name:"smart"},
+        {title:"英语老师",name:"odd"}
+    ];
+    function template(){
+        return `<ul>${lessino.map(item =>links `<li>课程：${item.title}，教师：${item.name}</li>`).join('')}</ul>`;     //item后面为标签模板
+    }
+    function links(strings, ...vars ){          //标签模板函数
+        return strings.map((str,key)=>{
+            return(str + (vars[key]? vars[key].replace("老师",`<a href="www.laihsi.com">老师</a>`)  :'' ))
+        }).join('');
+    }
+    document.body.innerHTML += template();
+</script>
+</body>
+</html>

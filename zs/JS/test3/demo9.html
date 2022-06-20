@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo9.html</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<script>
+    const start =  Date.now();
+    for (let i = 0; i < 2000000000; i++) {
+
+    }
+    const end = Date.now();
+    //console.log((end-start)/1000+"秒");   //查看脚本执行时间；
+
+    //标志位查看脚本执行时间；
+    console.time("for");
+
+    console.timeEnd("for")
+
+    //时间戳转换
+    const date = new Date('1999-09-01 02:00:00');
+    const timestamp = date.valueOf();     //时间戳
+    console.log((timestamp));
+    console.log(new Date(timestamp));     //转换为正常时间
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo2</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        li:nth-child(odd) {            /*odd为奇数行，even为偶数行*/
+            background: #2ecc71;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+<script !src="">
+    let lessino =[
+        {title:"语文"},
+        {title:"数学"},
+        {title:"英语"}
+    ];
+    function template(){
+        return `<ul>${lessino.map(item => `<li>${item.title}</li>`).join('')}</ul>`;     //join是以空格连接
+    }
+    document.body.innerHTML = template();
+</script>
+</body>
+</html>

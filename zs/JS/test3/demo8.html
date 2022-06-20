@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo8.html</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<script>
+    let students = ['lisi', 'juan', 'tom','lisa','cat'];
+    // let math = (Math.floor(Math.random()*5));
+    // console.log(students[math]);
+    // let nathTow = Math.floor(2 + Math.random() * 3);
+    // console.log(students[nathTow]);
+
+    function arrayRandomValues(array , start = 1 , end  ){
+        end = end ? end  : array.length ;
+        start--;
+        const index = start + Math.floor(Math.random() * (end - start));//随机数加向下取整；
+        return array[index];
+    }
+    console.log(arrayRandomValues([0,1,2,3,4,5],3,4));
+
+</script>
+</body>
+</html>
