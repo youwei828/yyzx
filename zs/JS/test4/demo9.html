@@ -9,6 +9,17 @@
     <body>
         <script>
             console.log('今天学到了很多教训;');
+            function move(array, from, to) {
+                newArray = [...array];
+                let item = newArray.splice(from, 1);
+                newArray.splice(to, 0, ...item);
+                return newArray;
+            }
+            let array = [1, 2, 3, 4];
+            console.log(move(array, 1, 3)); //把第一个元素移到第三个的位置
+            //将字符串拆分成数组
+            let str = 'tom,rise';
+            console.table(str.split(',')); //split是根据原字符串的符号
         </script>
     </body>
 </html>
