@@ -1,0 +1,57 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly; /* 均匀排列每个元素
+    每个元素之间的间隔相等 */
+    align-items: center;
+    gap: 9rem;
+    background-color: #333;
+}
+.pulse ion-icon {
+    font-size: 30px;
+    position: absolute;
+    padding: 7px;
+}
+
+.pulse {
+    width: 3rem;
+    color: #fff;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    background-color: #35d1e6;
+}
+.pulse,
+.pulse::before,
+.pulse::after {
+    content: '';
+    display: grid;
+    grid-area: 1/1;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: 0 0 0 0 #35d1e633;
+    animation: pulsing 3s linear infinite var(--s, 0s);
+    -webkit-animation: pulsing 3s linear infinite var(--s, 0s);
+}
+.pulse::before {
+    --s: 1s;
+}
+.pulse::after {
+    --s: 2s;
+}
+.pulse:hover {
+    background: #35d1e633;
+    color: #ffff;
+}
+@keyframes pulsing {
+    to {
+        box-shadow: 0 0 0 6rem rgba(2, 0, 0, 0);
+    }
+}
