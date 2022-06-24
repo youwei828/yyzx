@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>some和every判断</title>
+    </head>
+    <body>
+        <input type="text" name="key" />
+        <span></span>
+        <script>
+            let arr = ['php', 'js'];
+            let title = document.querySelector('[name="key"]');
+            title.addEventListener('keyup', function () {
+                let res = arr.some(arr => {
+                    return this.value.indexOf(arr) != -1;
+                });
+                document.querySelector('span').innerHTML = res ? '' : '必须包含' + arr.join('，') + '关键词';
+            });
+        </script>
+    </body>
+</html>

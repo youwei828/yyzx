@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let arr = [1, 2, 3, 4, 4, 4, 6, 5, 1, 0];
+            arr = arr.sort(function (a, b) {
+                return a - b; //a-b是顺序，b-a是逆序
+            });
+            console.log(arr);
+            //购物车排序
+            let cart = [
+                { name: 'iphone', price: '19999' },
+                { name: 'imac', price: '1800' },
+                { name: 'ipad', price: '5799' },
+            ];
+            cart = cart.sort(function (a, b) {
+                return b.price - a.price;
+            });
+            console.table(cart);
+            //sort排序
+            let res = [1, 4, 2, 8, 5, 9, 0];
+            function sort(array, callback) {
+                for (const n in res) {
+                    for (const m in res) {
+                        if (callback(array[n], array[m]) < 0) {
+                            const temp = array[n];
+                            array[n] = array[m];
+                            array[m] = temp;
+                        }
+                    }
+                }
+                return res;
+            }
+            res = sort(res, function (a, b) {
+                return b - a;
+            });
+            console.table(res);
+        </script>
+    </body>
+</html>

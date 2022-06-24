@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>炫酷的效果</title>
+    </head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            width: 170vh;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: gainsboro;
+        }
+        div {
+            font-size: 5em;
+            font-weight: bold;
+            /* text-transform: uppercase; 大写字母*/
+            color: blueviolet;
+        }
+        div > span {
+            display: inline-block; /*变成行级块*/
+            position: relative; /*相对定位*/
+        }
+        .color {
+            animation-name: color; /*动画名字*/
+            animation-duration: 1s; /*动画时间*/
+            animation-iteration-count: 2; /*重复次数*/
+            animation-timing-function: linear; /*动画方式-线性动画*/
+            animation-direction: alternate; /*动画来回切换*/
+        }
+        @keyframes color {
+            50% {
+                color: yellow;
+                transform: scale(2); /*放大两倍*/
+            }
+            100% {
+                color: red;
+                transform: scale(0.5); /*缩小*/
+            }
+        }
+    </style>
+    <body>
+        <div name="cj">春江潮水连海平，海上明月共潮生</div>
+        <script>
+            const divs = document.querySelector('[name = "cj"]');
+            console.log(divs.textContent);
+            [...divs.textContent].reduce(function (pre, cur, index) {
+                pre == index && (divs.innerHTML = '');
+                console.log(pre, cur, index);
+                let span = document.createElement('span');
+                span.innerHTML = cur;
+                divs.appendChild(span);
+                span.addEventListener('mouseover', function () {
+                    this.classList.add('color');
+                });
+                //去掉动画效果,动画结束监听
+                span.addEventListener('animationend', function () {
+                    this.classList.remove('color');
+                });
+            }, 0);
+        </script>
+    </body>
+</html>

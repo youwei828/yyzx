@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //从购物车中找到大于500的商品名称
+            let cart = [
+                { name: 'shop', price: '200' },
+                { name: 'html', price: '200' },
+                { name: 'html', price: '200' },
+                { name: 'css', price: '540' },
+                { name: 'css', price: '540' },
+                { name: 'qiezi', price: '680' },
+                { name: 'qiezi', price: '680' },
+            ];
+            function getNameByPrice(goods, price) {
+                return goods
+                    .reduce(function (arr, cur) {
+                        if (cur.price > price) arr.push(cur);
+                        return arr;
+                    }, [])
+                    .map(item => item.name);
+            }
+            console.table(getNameByPrice(cart, 500));
+            //去除重复商品
+            function filterGoods(goods) {
+                return goods.reduce(function (arr, cur) {
+                    let find = arr.find(v => v.name == cur.name);
+                    if (!find) arr.push(cur);
+                    return arr;
+                }, []);
+            }
+            console.table(filterGoods(cart));
+        </script>
+    </body>
+</html>
