@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //使用set去除重复数组元素
+            let arr = [1, 2, 3, 3, 4, 4, 5, 6, 1, 2, 3, 4, 5, 2];
+            arr = [...new Set(arr)];
+            console.log(arr);
+            //使用数组求set里小于5的元素；
+            let set = new Set('123456789');
+            set = new Set([...set].filter(item => item < 5));
+            console.log(set);
+        </script>
+    </body>
+</html>

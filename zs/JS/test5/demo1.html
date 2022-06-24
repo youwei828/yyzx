@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Symbol</title>
+    </head>
+    <body>
+        <script>
+            let user1 = {
+                name: 'lisi',
+                key: Symbol(),
+            };
+            let user2 = {
+                name: 'lisi',
+                key: Symbol(),
+            };
+            let grade = {
+                [user1.key]: { java: 77, css: 90 },
+                [user2.key]: { java: '56', css: 92 },
+            };
+            console.log(grade[user1.key]);
+        </script>
+    </body>
+</html>

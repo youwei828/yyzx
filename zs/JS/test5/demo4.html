@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        body {
+            padding: 200px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 300px;
+        }
+        li {
+            border: red solid 1px;
+            padding: 50xp;
+        }
+        li:nth-of-type(odd) {
+            background-color: green;
+        }
+    </style>
+    <body>
+        <input type="text" name="zyw" />
+        <ul></ul>
+        <script>
+            let obj = {
+                data: new Set(),
+                keywords(word) {
+                    this.data.add(word);
+                },
+                show() {
+                    let ul = document.querySelector('ul');
+                    ul.innerHTML = '';
+                    //之后循环data数据
+                    this.data.forEach(function (value) {
+                        ul.innerHTML += `<li>${value}</li>`;
+                    });
+                },
+            };
+            //给input加上失去焦点(blur)的时间
+            let input = document.querySelector("[name='zyw']");
+            input.addEventListener('blur', function () {
+                obj.keywords(this.value);
+                obj.show();
+            });
+        </script>
+    </body>
+</html>
