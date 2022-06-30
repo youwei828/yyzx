@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let lessons = [
+                { title: 'css', click: 24 },
+                { title: 'js', click: 51 },
+                { title: 'html', click: 23 },
+            ];
+            function change(lessons, num = 100, i = 0) {
+                if (i == lessons.length) {
+                    return lessons;
+                }
+                lessons[i].click += num;
+                return change(lessons, num, ++i);
+            }
+            console.table(change(lessons));
+            //使用map
+            lessons.map(item => (item += lessons.click));
+            console.table(lessons);
+        </script>
+    </body>
+</html>

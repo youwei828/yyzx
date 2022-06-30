@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            padding: 200px;
+        }
+        ul {
+            list-style: 0;
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+        li {
+            height: 30xp;
+            border: red 2px solid;
+            margin-bottom: 20px;
+            display: flex;
+            /* justify-content: space-between;  均匀排列每个元素首个元素放置于起点，末尾元素放置于终点 ,li里面有两个元素字符串和a标签*/
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 10px;
+            color: blue;
+            transition: 1s;
+        }
+        a {
+            border-radius: 3px;
+            width: 20px;
+            height: 20px;
+            text-decoration: none;
+            text-align: center;
+            background-color: aqua;
+            text-align: center;
+            color: aliceblue;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 5px;
+        }
+        .remove {
+            border: solid 2px #eee;
+            opacity: 0.8;
+            color: #eee;
+        }
+        .remove a {
+            background-color: #eee;
+        }
+    </style>
+    <body>
+        <ul>
+            <li>html<a href="#">X</a></li>
+            <li>css<a href="#">X</a></li>
+            <li>javascript<a href="#">X</a></li>
+        </ul>
+    </body>
+    <script>
+        class Todos {
+            constructor() {}
+            run() {
+                this.item = document.querySelectorAll('ul>li');
+                this.lists = new WeakSet();
+                this.record();
+                this.addEvent();
+            }
+            record() {
+                this.item.forEach(item => this.lists.add(item));
+            }
+            //之后对lists进行操作
+            addEvent() {
+                this.item.forEach(item => {
+                    item.querySelector('a').addEventListener('click', event => {
+                        //检测Weakset是否存在li元素
+                        const parentElement = event.target.parentElement;
+                        if (!this.lists.has(parentElement)) {
+                            alert('已删除此课程');
+                        } else {
+                            //删除后从记录的Weakset中移除
+                            parentElement.classList.add('remove');
+                            this.lists.delete(parentElement);
+                        }
+                    });
+                });
+            }
+        }
+        new Todos().run();
+    </script>
+</html>
