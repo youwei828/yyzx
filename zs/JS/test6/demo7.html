@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        body {
+            background-color: rgb(65, 63, 63);
+        }
+    </style>
+    <body>
+        <h1>www.yyzx.com</h1>
+    </body>
+    <script>
+        function Color(elem) {
+            this.elem = elem;
+            this.colors = ['yellow', 'green', 'orange', '#fff'];
+            this.run = function () {
+                setInterval(
+                    function () {
+                        let i = Math.floor(Math.random() * this.colors.length);
+                        this.elem.style.backgroundColor = this.colors[i];
+                    }.bind(this),
+                    1000
+                );
+            };
+        }
+        let job = new Color(document.body);
+        job.run();
+        let h1 = new Color(document.querySelector('h1'));
+        h1.run();
+    </script>
+</html>

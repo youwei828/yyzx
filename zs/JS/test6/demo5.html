@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function Request() {
+                this.get = function (param) {
+                    let str = Object.keys(param)
+                        .map(k => `${k}=${param[k]}`)
+                        .join('&');
+                    let url = `http://${this.url}?${str}`;
+                    document.write(url + '<hr/>');
+                };
+            }
+            function Article() {
+                this.url = 'article/lists';
+                Request.call(this);
+            }
+            let a = new Article();
+            console.log(a.get({ id: '1', cat: 'js' }));
+
+            function User() {
+                this.url = 'user/lists';
+                Request.call(this);
+            }
+            let user = new User();
+            console.log(user.get({ id: '2', cat: 'html' }));
+        </script>
+    </body>
+</html>
