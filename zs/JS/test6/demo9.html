@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        button {
+            position: absolute;
+            /* 绝对定位 */
+        }
+    </style>
+    <body>
+        <button message="1">html</button>
+        <!-- <button message="2">js</button> -->
+        <!-- <script>
+            let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            function between(a, b) {
+                return function (v) {
+                    return v > a && v < b;
+                };
+            }
+            console.log(arr.filter(between(3, 9)));
+            //按钮移动
+        </script> -->
+        <script>
+            let buts = document.querySelectorAll('button');
+            buts.forEach(elem => {
+                let interval = false;
+                elem.addEventListener('click', function () {
+                    if (!interval) {
+                        let left = 1;
+                        interval = setInterval(() => {
+                            elem.style.left = left++ + 'px';
+                        }, 100);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
