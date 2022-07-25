@@ -6,4 +6,13 @@
         <title>this</title>
     </head>
     <body></body>
+    <script>
+        function Fun() {}
+        var fun = new Fun();
+        console.log(Fun.prototype);
+        console.log(Fun.__proto__);
+        console.log(fun.prototype);
+        console.log(fun.__proto__);
+        console.log(Fun.prototype === fun.__proto__);
+    </script>
 </html>

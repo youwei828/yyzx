@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+        .clearfix::before,
+        .clearfix::after {
+            content: '';
+            display: table;
+        }
+
+        .container::after,
+        .clearfix::after {
+            clear: both;
+        }
+        .main {
+            width: 800px;
+            margin: auto;
+        }
+        .header,
+        .nav,
+        .cantainer,
+        .footer {
+            float: left;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .header {
+            background-color: #ccc;
+            text-align: center;
+            padding: 20px;
+        }
+        .nav {
+            background-color: antiquewhite;
+        }
+        .nav a {
+            color: #67ffff;
+            padding: 10px 60px;
+            display: inline-block;
+        }
+        .nav a:hover {
+            background-color: #bbb;
+            color: #aaa;
+        }
+        .cantainer .lside {
+            float: left;
+            width: 200px;
+        }
+        .cantainer .rside {
+            float: right;
+            width: 200px;
+        }
+        .cantainer .content {
+            margin: 0 205px;
+            padding: 5px;
+        }
+        .footer {
+            padding: 10px;
+            text-align: center;
+            background-color: #ddd;
+        }
+        .lside,
+        .rside,
+        .content {
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        @media screen and (max-width: 700px) {
+            .lside,
+            .rside,
+            .content {
+                width: 100%;
+                margin: 0;
+                background-color: #777;
+            }
+        }
+    </style>
+    <body>
+        <div class="main clearfix">
+            <div class="header">
+                我是header
+                <h1>我时网页的头部</h1>
+                <p>我是广告</p>
+            </div>
+            <div class="nav">
+                我是nav <a href="">导航项</a><a href="">导航项</a><a href="">导航项</a><a href="">导航项</a
+                ><a href="">导航项</a>
+            </div>
+            <div class="cantainer clearfix">
+                <div class="lside">
+                    <h1>我是左栏</h1>
+                    <p>
+                        我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
+                    </p>
+                </div>
+                <div class="rside">
+                    <h1>我是右边栏</h1>
+                    <p>
+                        我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
+                    </p>
+                </div>
+                <div class="content">
+                    <h1>我是中间栏</h1>
+                    <p>
+                        我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
+                    </p>
+                </div>
+            </div>
+            <div class="footer">我是footer</div>
+        </div>
+    </body>
+</html>

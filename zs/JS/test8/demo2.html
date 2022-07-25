@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const data = [
+                { name: 'js', price: 32 },
+                { name: 'html', price: 31 },
+                { name: 'css', price: 21 },
+            ];
+            class Lesson {
+                constructor(data) {
+                    this.model = data;
+                }
+                get price() {
+                    return this.model.price;
+                }
+                get name() {
+                    return this.model.name;
+                }
+                static totalPrice(data) {
+                    return data.reduce((t, c) => {
+                        return t + c.price;
+                    }, 0);
+                }
+                static createBatch(data) {
+                    // return data.map(item => new Lesson(item));
+                    return [].map.call(data, item => new Lesson(item));
+                }
+                static maxPrice(data) {
+                    return data.sort((a, b) => a.price - b.price)[0];
+                    // return [].sort.call(data, (a, b) => a.price < b.price)[0];
+                }
+            }
+            let lessons = Lesson.createBatch(data);
+            console.log(lessons);
+            let max = Lesson.maxPrice(lessons);
+            console.log(max.price);
+            console.log(max.name);
+            let total = Lesson.totalPrice(lessons);
+            console.log(total);
+        </script>
+    </body>
+</html>

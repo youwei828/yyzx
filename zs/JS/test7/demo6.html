@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		<script type="text/javascript">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>数据的双向绑定</h1>
+        <hr style="background-color: rgb(133, 51, 51)" />
+        <input type="text" v-model="title" title="123" value="" />
+        <input type="text" v-model="title" title="456" value="" />
+        <h4 v-bind="title">这里会发生更新</h4>
+        <hr style="background-color: red" />
+        <input type="text" v-model="connect" title="456" value="" />
+        <h4 v-bind="connect">这里会发生更新</h4>
 
-		</script>
-	</body>
+        <script>
+            function View() {
+                let proxy = new Proxy(
+                    {},
+                    {
+                        get(obj, property) {},
+                        set(obj, property, value) {
+                            let p = document.querySelectorAll(`[v-model='${property}']`);
+                            p.forEach(item => {
+                                item.value = value;
+                            });
+                            let h4 = document.querySelectorAll(`[v-bind='${property}']`);
+                            h4.forEach(item => {
+                                item.innerHTML = value;
+                            });
+                        },
+                    }
+                );
+                this.init = function () {
+                    const els = document.querySelectorAll('[v-model]');
+                    els.forEach(item => {
+                        item.addEventListener('keyup', function () {
+                            // proxy是一个对象{}，
+                            proxy[this.getAttribute('v-model')] = this.value;
+                        });
+                    });
+                };
+            }
+            new View().init();
+        </script>
+    </body>
 </html>
