@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let module = (function () {
+                const moduleLists = {};
+                function define(name, modules, action) {
+                    modules.map((m, i) => {
+                        modules[i] = moduleLists[m];
+                    });
+                    moduleLists[name] = action.apply(null, modules);
+                }
+                return { define };
+            })();
+            module.define('hd', [], function () {
+                return {
+                    first(arr) {
+                        return arr[0];
+                    },
+                    max(arr, key) {
+                        return arr.sort((a, b) => b[key] - a[key])[0];
+                    },
+                };
+            });
+            module.define('lesson', ['hd'], function (hd) {
+                let data = [
+                    { name: 'mysql', price: 21 },
+                    { name: 'js', price: 24 },
+                ];
+                console.log(hd.max(data, 'price'));
+            });
+        </script>
+    </body>
+</html>
