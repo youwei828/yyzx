@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>正则表达式</title>
+    </head>
+    <body>
+        <div class="content">houdunren.com</div>
+    </body>
+    <script>
+        let con = prompt('请输入，支持正则');
+        let reg = new RegExp(con, 'g');
+        // let div = document.querySelector('div');
+        // console.log(div.innerHTML);
+        let div = document.getElementsByClassName('content')[0];
+        div.innerHTML = div.innerHTML.replace(reg, search => {
+            return `<span style="color:red">${search}</span>`;
+        });
+    </script>
+</html>
