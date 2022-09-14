@@ -7,6 +7,11 @@
         <title>Document</title>
     </head>
     <body>
-        <script></script>
+        <main>张有为的网站；张有为的网站；张有为的网站；张有为的网站；</main>
+        <script>
+            const main = document.querySelector('main');
+            // console.log(main);
+            main.innerHTML = main.innerHTML.replace(/网站/g, `<a href = 'http://www.baidu.com'>$&</a>`);
+        </script>
     </body>
 </html>

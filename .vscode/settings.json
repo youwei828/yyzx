@@ -1,0 +1,16 @@
+{
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorBlinking": "expand",
+    "editor.cursorStyle": "line",
+    "editor.cursorSurroundingLinesStyle": "default",
+    "files.autoSave": "onFocusChange",
+    "editor.renderWhitespace": "selection",
+    "editor.wordWrap": "off",
+    "editor.columnSelection": false,
+    "editor.smoothScrolling": true,
+    "files.insertFinalNewline": true,
+    "workbench.list.smoothScrolling": true,
+    "window.autoDetectColorScheme": false,
+    "debug.allowBreakpointsEverywhere": true,
+    "debug.showBreakpointsInOverviewRuler": true
+}
