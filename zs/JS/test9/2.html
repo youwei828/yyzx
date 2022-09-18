@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        div {
+            float: left;
+            left: 8px;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            position: relative;
+        }
+    </style>
+    <body>
+        <div></div>
+        <script>
+            function interval(callback, delay = 100) {
+                let id = setInterval(() => callback(id), delay);
+            }
+            interval(timeID => {
+                const divv = document.querySelector('div');
+                //然后找到div左边距离浏览器的边界；
+                let left = parseInt(window.getComputedStyle(divv).left);
+                divv.style.left = left + 5 + 'px';
+                if (left >= 200) {
+                    clearInterval(timeID);
+                    interval(timeID => {
+                        let width = parseInt(window.getComputedStyle(divv).width);
+                        divv.style.width = width - 5 + 'px';
+                        if (width <= 20) {
+                            clearInterval(timeID);
+                        }
+                    }, 50);
+                }
+            }, 100);
+            for (let i = 0; i < 20000; i++) {
+                console.log(i);
+            }
+        </script>
+    </body>
+</html>

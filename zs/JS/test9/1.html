@@ -6,7 +6,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
     </head>
-    <body>
-        zz
-    </body>
+    <body></body>
+    <script>
+        function loadImage(src, reslove, reject) {
+            let image = new Image();
+            image.src = src;
+            image.onload = () => {
+                reslove(image);
+            };
+            image.onerror = () => {
+                reject();
+            };
+        }
+        loadImage(
+            '../img/seckill-head.jpg',
+            image => {
+                document.body.appendChild(image);
+                //appendChild是添加节点的方法
+            },
+            () => {
+                console.log('图片加载失败');
+            }
+        );
+        console.log('这是图片加载前的一句。');
+    </script>
 </html>
