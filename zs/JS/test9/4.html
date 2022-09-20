@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body></body>
+    <script type="module">
+        // const url = 'https://www.imooc.com/api/http/search/suggest?words=js';
+        // const xhr = new XMLHttpRequest();
+        // xhr.onreadystatechange = () => {
+        //     if (xhr.readyState < 4) return;
+        //     if ((xhr.status >= 200) & (xhr.status < 300) || xhr.status === 304) {
+        //         console.log(xhr.response);
+        //         console.log(typeof xhr.response);
+        //     }
+        // };
+        // xhr.open('GET', url, true);
+        // xhr.send(null);
+        import { set, get, remove, clear } from './4.js';
+        set('ls', 'alex');
+        console.log(get('ls'));
+        set('zs', {
+            hobby: ['篮球', '唱歌'],
+            sex: 'male',
+        });
+        console.log(get('zs'));
+        remove('username');
+        clear();
+    </script>
+</html>
