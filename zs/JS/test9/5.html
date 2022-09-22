@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const headleResponse = data => {
+                console.log(data);
+            };
+        </script>
+        <script src="https://imooc.com/api/http/jsonp?callback=headleResponse"></script>
+        <!-- 相当与 -->
+        <script>
+            headleResponse({
+                code: 200,
+                data: [{ word: 'jsp' }, { word: 'js' }, { word: 'json' }, { word: 'js 入门' }, { word: 'jstl' }],
+            });
+            //动态加载JSONP接口
+            const script = document.createElement('script');
+            script.src = 'https://imooc.com/api/http/jsonp?callback=headleResponse';
+            document.body.appendChild(script);
+        </script>
+    </body>
+</html>

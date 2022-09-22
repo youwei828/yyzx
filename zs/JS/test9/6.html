@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form
+            id="login"
+            action="https://www.imooc.com/api/http/search/suggest?words=js"
+            enctype="application/x-www-form-urlencoded"
+            method="post"
+        >
+            <input type="text" name="username" placeholder="用户名" />
+            <input type="password" name="password" placeholder="密码" />
+            <input type="submit" id="submit" value="提交" />
+        </form>
+    </body>
+    <script>
+        const url = 'https://www.imooc.com/api/http/search/suggest?words=js';
+        const login = document.getElementById('login');
+        const { username, password } = login;
+        const btn = document.getElementById('submit');
+        btn.addEventListener(
+            'click',
+            e => {
+                //阻止表单自动提交；
+                e.preventDefault();
+                //表单的数据验证；
+                //可以进行正则的验证；
+                //发送Ajxa请求；
+                let xhr = new XMLHttpRequest();
+                xhr.addEventListener(
+                    'onload',
+                    () => {
+                        if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304) {
+                            console.log(xhr.responseText);
+                        }
+                    },
+                    false
+                );
+                xhr.open('POST', url, true);
+                //组装数据；
+                // const data = `username=${username.value}&password=${password.value}`;
+                const data = new FormData(login);
+                for (const item of data) {
+                    console.log(item);
+                }
+                //设置请求头提交的数据格式
+                // xhr.setRequestHeader('Content-type', 'x-www-form-urlencoded');
+                xhr.send(data);
+            },
+            false
+        );
+    </script>
+</html>
