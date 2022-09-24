@@ -1,0 +1,32 @@
+p {
+    color: #333;
+    font-size: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+html {
+    font-size: 16px;
+    color: brown;
+}
+
+.container {
+    font-size: 20px;
+}
+.container .header {
+    width: 200px;
+    height: 200px;
+}
+.container .header .left {
+    float: left;
+}
+.container .header .right {
+    float: right;
+}
+.container .footer {
+    background-color: green;
+}
+.container::after {
+    display: inline-block;
+}

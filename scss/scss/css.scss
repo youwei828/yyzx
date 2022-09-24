@@ -1,0 +1,29 @@
+$baseColor: #333;
+p {
+    color: $baseColor;
+    font-size: 15px;
+    display: flex;
+}
+html {
+    font-size: 16px;
+    color: brown;
+}
+.container {
+    font-size: 20px;
+    .header {
+        width: 200px;
+        height: 200px;
+        .left {
+            float: left;
+        }
+        .right {
+            float: right;
+        }
+    }
+    .footer {
+        background-color: green;
+    }
+    &::after {
+        display: inline-block;
+    }
+}
