@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.39/vue.global.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="app">
+            <!-- t添加事件v-on:[事件名]或者简写为:@[事件名] -->
+            <!-- <div @click="add">{{name}}</div> -->
+            <!-- <div @[event]="add">{{name}}</div> -->
+
+            <!-- 同样是阻止默认事件 -->
+            <!-- <a href="http://www.mingyueblog.top" @[event]="go">{{name}}</a> -->
+            <!-- <a href="http://www.mingyueblog.top" @click.prevent="go">{{name}}</a> -->
+
+            <!-- 有参数 -->
+            <!-- <a href="#" @click="go($event,'youwei')">{{name}}</a> -->
+            {{num}}
+            <button @click="add">增加</button>
+            <button @click="desc">减少</button>
+            <span style="background-color: red; color: aliceblue" v-if="error">提示：{{error}}</span>
+        </div>
+        <script src="12.js"></script>
+    </body>
+</html>

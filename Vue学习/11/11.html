@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.39/vue.global.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="app">
+            <!-- 动态绑定，控制属性值，可以简写为:id,NULL和undefined无效的值-->
+            <!-- <div v-bind:id="id">{{name}}</div>
+            {{n==1?'等于1':'不等于1'}} -->
+
+            <!-- 控制元素的显示，true为显示，false为不显示 -->
+            <!-- <div v-show="true">{{name}}</div> -->
+
+            <!-- 控制元素不进行刷新 -->
+            <!-- <div v-once>{{name}}</div> -->
+
+            <!-- 控制属性名 -->
+            <a :[args]="id">{{name}}</a>
+        </div>
+        <script src="11.js"></script>
+    </body>
+</html>
