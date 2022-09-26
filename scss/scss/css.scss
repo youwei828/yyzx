@@ -1,3 +1,5 @@
+// 这是注释，不在css显示---
+/* 这也是注释*/
 $baseColor: #333;
 p {
     color: $baseColor;
@@ -21,9 +23,52 @@ html {
         }
     }
     .footer {
-        background-color: green;
+        background: {
+            color: green;
+            size: 80%;
+        }
     }
     &::after {
         display: inline-block;
     }
+}
+.common %bas {
+    background: {
+        color: green;
+        -webkit-animation-play-state: abs($number: 0);
+    }
+    color: rebeccapurple;
+}
+.left {
+    @extend %bas;
+    font: {
+        size: 18px;
+    }
+    background-color: #333;
+}
+.right {
+    @extend %bas;
+    font: {
+        size: 10px;
+        color: #333;
+    }
+}
+$judge: false;
+@if $judge {
+    .contain {
+        color: red;
+    }
+} @else {
+    .contain {
+        color: aliceblue;
+    }
+}
+
+.contain %base {
+    font-size: 16px;
+    color: red;
+}
+.header {
+    @extend %base;
+    background: green;
 }

@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* 这也是注释*/
 p {
     color: #333;
     font-size: 15px;
@@ -26,7 +28,38 @@ html {
 }
 .container .footer {
     background-color: green;
+    background-size: 80%;
 }
 .container::after {
     display: inline-block;
+}
+
+.common .right,
+.common .left {
+    background-color: green;
+    background--webkit-animation-play-state: 0;
+    color: rebeccapurple;
+}
+
+.left {
+    font-size: 18px;
+    background-color: #333;
+}
+
+.right {
+    font-size: 10px;
+    font-color: #333;
+}
+
+.contain {
+    color: aliceblue;
+}
+
+.contain .header {
+    font-size: 16px;
+    color: red;
+}
+
+.header {
+    background: green;
 }

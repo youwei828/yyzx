@@ -19,5 +19,6 @@ const app = Vue.createApp({
             if (this.num > 0) this.num--;
         },
     },
+    template: '<div>123</div>',
 });
 const vm = app.mount('#app');
