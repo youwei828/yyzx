@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="#">
+            <!-- 定义input元素 -->
+            <input type="text" name="text" id="a" value="123" />
+        </form>
+        <script>
+            //查找id为a的元素
+            let liveID;
+            liveID = document.querySelector('#a').value;
+            console.log(liveID);
+            //添加键盘弹起事件
+            // a.addEventListener('keyup', e => {
+            //     // 打印a的内容console.log(a.value);
+            //     let strings = '';
+            //     e.target.value.split(' ').join('');
+            //     if (e.target.value !== '') {
+            //         console.log('有值');
+            //     } else {
+            //         console.log('值为空');
+            //     }
+            //     // console.log(e.target.value);
+            // });
+        </script>
+    </body>
+</html>

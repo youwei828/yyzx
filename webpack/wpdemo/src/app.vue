@@ -1,6 +1,6 @@
 <template>
     <div id="test">
-        {{ name }}
+        <h1>{{ name }}</h1>
     </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
     data() {
         return {
-            name: '人间',
+            name: '人间词话',
         };
     },
 };
