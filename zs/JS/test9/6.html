@@ -21,7 +21,7 @@
     <script>
         const url = 'https://www.imooc.com/api/http/search/suggest?words=js';
         const login = document.getElementById('login');
-        const { username, password } = login;
+        const { username, password } = login;  //解构对象
         const btn = document.getElementById('submit');
         btn.addEventListener(
             'click',
@@ -39,7 +39,7 @@
                             console.log(xhr.responseText);
                         }
                     },
-                    false
+                    false  //事件冒泡
                 );
                 xhr.open('POST', url, true);
                 //组装数据；

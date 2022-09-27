@@ -27,7 +27,7 @@ export default {
 
 <style>
 .hd {
-    background-color: aquaxxxxxxxxxxxxxxxxx;
+    background-color: blue;
 }
 /* .logo {
     height: 6em;
