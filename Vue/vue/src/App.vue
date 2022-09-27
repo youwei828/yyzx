@@ -30,7 +30,11 @@ export default {
 
 <style>
 .hd {
+<<<<<<< HEAD
     background-color: aliceblue;
+=======
+    background-color: blue;
+>>>>>>> efd29d3fafb276e0b56e17687ad65db7f9b9a91b
 }
 /* .logo {
     height: 6em;
