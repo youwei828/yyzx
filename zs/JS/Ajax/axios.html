@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 基本用法 -->
+        <!-- // 引入axios -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script>
+            const url = 'https://www.imooc.com/api/http/search/suggest?words=js';
+            // console.log(axios);
+            axios(url, {
+                method: 'post',
+                //请求头信息
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    // 'Content-Type': 'application/json',
+                },
+                //请求头携带的参数
+                params: {
+                    uesr: 'alex',
+                },
+                //请求体携带的参数
+                data: 'agr =18&sex =male',
+                // timeout: 1,
+                // withCredentials: true,
+            })
+                .then(resopnse => {
+                    console.log(resopnse);
+                    console.log(resopnse.data);
+                })
+                .catch(err => {
+                    console.log(err);
+                });
+            axios
+                .get(url, {
+                    params: {
+                        username: 'alex',
+                    },
+                })
+                .then(result => {
+                    console.log(result);
+                })
+                .catch(err => {
+                    console.log(err);
+                });
+            axios
+                // .post(url, 'username=alex')
+                .post('https://www.imooc.com/api/http/json/search/suggest?words=js', { username: 'alex' })
+                .then(result => {
+                    console.log(result);
+                })
+                .catch(err => {
+                    console.log(err);
+                });
+            // axios.put();
+            // axios.delete();
+        </script>
+    </body>
+</html>

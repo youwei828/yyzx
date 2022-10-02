@@ -1,65 +1,64 @@
 @charset "UTF-8";
 /* 这也是注释*/
 p {
-    color: #333;
-    font-size: 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  color: #333;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 html {
-    font-size: 16px;
-    color: brown;
+  font-size: 16px;
+  color: brown;
 }
 
 .container {
-    font-size: 20px;
+  font-size: 20px;
 }
 .container .header {
-    width: 200px;
-    height: 200px;
+  width: 200px;
+  height: 200px;
 }
 .container .header .left {
-    float: left;
+  float: left;
 }
 .container .header .right {
-    float: right;
+  float: right;
 }
 .container .footer {
-    background-color: green;
-    background-size: 80%;
+  background-color: green;
+  background-size: 80%;
 }
 .container::after {
-    display: inline-block;
+  display: inline-block;
 }
 
-.common .right,
-.common .left {
-    background-color: green;
-    background--webkit-animation-play-state: 0;
-    color: rebeccapurple;
+.common .right, .common .left {
+  background-color: green;
+  background--webkit-animation-play-state: 0;
+  color: rebeccapurple;
 }
 
 .left {
-    font-size: 18px;
-    background-color: #333;
+  font-size: 18px;
+  background-color: #333;
 }
 
 .right {
-    font-size: 10px;
-    font-color: #333;
+  font-size: 10px;
+  font-color: #333;
 }
 
 .contain {
-    color: aliceblue;
+  color: aliceblue;
 }
 
 .contain .header {
-    font-size: 16px;
-    color: red;
+  font-size: 16px;
+  color: red;
 }
 
 .header {
-    background: green;
+  background: green;
 }
