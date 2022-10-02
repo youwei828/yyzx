@@ -1,7 +1,8 @@
 <script>
 import ClassCompontent from './components/Classcomponents.vue';
+import ClassList from './components/Clist.vue';
 export default {
-    components: { ClassCompontent },
+    components: { ClassCompontent, ClassList },
     data() {
         return {};
     },
@@ -9,8 +10,8 @@ export default {
 </script>
 
 <template>
-    <ClassCompontent />
-    <class-compontent></class-compontent>
+    <!-- <class-compontent /> -->
+    <class-list />
 </template>
 
 <style></style>
