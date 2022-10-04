@@ -1,10 +1,5 @@
 export default [
-    {
-        title: '人间',
-        status: false,
-    },
-    {
-        title: '词话',
-        status: false,
-    },
+    { id: '1', title: 'linux', isDelete: false, price: 999, comments: 189 },
+    { id: '2', title: 'CSS', isDelete: false, price: 80, comments: 228 },
+    { id: '3', title: 'Mysql', isDelete: false, price: 300, comments: 128 },
 ];
