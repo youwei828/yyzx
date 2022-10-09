@@ -6,6 +6,10 @@ import ifCommentVue from './components/ifComment.vue';
 import ClasscomponentsVue from './components/Classcomponents.vue';
 import LessonFor from './components/LessonFor.vue';
 import ArrComponentVue from './components/ArrComponent.vue';
+import EventComponentVue from './components/EventComponent.vue';
+import EventFixComponentVue from './components/EventFixComponent.vue';
+import KeyComponentVue from './components/KeyComponent.vue';
+import InputConponentVue from './components/InputConponent.vue';
 export default {
     components: {
         ClassCompontent,
@@ -15,6 +19,10 @@ export default {
         ClasscomponentsVue,
         LessonFor,
         ArrComponentVue,
+        EventComponentVue,
+        EventFixComponentVue,
+        KeyComponentVue,
+        InputConponentVue,
     },
     data() {
         return {};
@@ -29,7 +37,12 @@ export default {
 
     <!-- <if-comment-vue /> -->
     <!-- <lesson-for /> -->
-    <arr-component-vue />
+    <!-- <arr-component-vue /> -->
+    <!-- <lesson-for /> -->
+    <!-- <event-component-vue /> -->
+    <!-- <event-fix-component-vue /> -->
+    <!-- <key-component-vue /> -->
+    <input-conponent-vue />
 </template>
 
 <style></style>

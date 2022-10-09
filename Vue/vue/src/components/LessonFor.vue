@@ -1,7 +1,7 @@
 <template>
     <div>
-        <button @click="orderBy = 'price'" :class="{ 'order-by': orderBy == 'price' }">价格</button>
-        <button @click="orderBy = 'comments'" :class="{ 'order-by': orderBy == 'comments' }">评论数</button>
+        <button @click="orderBy = 'price'" :class="{ 'order-type': orderBy == 'price' }">价格</button>
+        <button @click="orderBy = 'comments'" :class="{ 'order-type': orderBy == 'comments' }">评论数</button>
         <button @click="lessonList = 'asc'" :class="{ 'order-type': orderType == 'asc' }">升序</button>
         <button @click="lessonList = 'desc'" :class="{ 'order-type': orderType == 'desc' }">降序</button>
         <template v-for="lesson in lessonList" :key="id"
@@ -37,9 +37,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .order-type {
-    background-color: aqua;
-}
-.order-by {
     background-color: aqua;
 }
 </style>

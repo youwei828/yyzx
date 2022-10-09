@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.39/vue.global.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="app">
+            <div>根组件<hd /></div>
+        </div>
+        <script type="text/x-template" id="HdTemplate">
+            <span>这是hd-<hd-xj/>-</span>
+        </script>
+        <script>
+            const app = Vue.createApp({});
+            app.component('hd', {
+                template: '#HdTemplate',
+            });
+            app.component('hd-xj', {
+                template: `<div>这是hdXJ</div>`,
+            });
+            app.mount('#app');
+        </script>
+    </body>
+</html>
