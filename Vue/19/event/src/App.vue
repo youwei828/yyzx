@@ -5,9 +5,10 @@
             :key="db.id"
             :lesson="db"
             @del="show"
-            v-model="db.title"
+            v-model:title.toupper.substr_8="db.title"
             v-model:modelValuePrice="db.price"
         />
+        <!-- v-model可以自定义修饰符 -->
         <!-- {{ dbs[0].title }} -->
         <!-- <input type="text" :value="title" @input="title = $event.target.value" /> -->
         <!-- {{ title }} -->

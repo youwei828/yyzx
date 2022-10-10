@@ -6,7 +6,7 @@
                 v-if="inputShow"
                 type="text"
                 :value="lesson.title"
-                @input="$emit('update:modelValue', $event.target.value)"
+                @input="changeTitle"
                 @blur="inputShow = false"
                 @keyup.enter="inputShow = false"
             />
@@ -40,7 +40,7 @@ export default {
     // inheritAttrs: false,
     //$emits自定义触发事件,注册,可以传参数
     emits: {
-        'update:modelValue': null,
+        'update:title': null,
         'update:modelValuePrice': null,
         //事件验证
         del(v) {
@@ -50,10 +50,25 @@ export default {
             console.error('del emit 需要数值参数');
         },
     },
-    props: ['lesson', 'modelValue', 'modelValuePrice'],
+    props: ['lesson', 'title', 'modelValuePrice', 'titleModifiers'],
+    // created() {
+    //     console.log(this.titleModifiers);
+    // },
     methods: {
         del() {
             if (confirm('确定删除')) this.$emit('del', this.lesson.id);
+        },
+        changeTitle($event) {
+            let value = $event.target.value;
+            if (this.titleModifiers.toupper) {
+                value = value.toUpperCase();
+            }
+            const substr = Object.keys(this.titleModifiers).find(m => /^substr_/.test(m));
+            if (substr) {
+                let info = substr.split('_');
+                value = value.substr(0, info[1]);
+            }
+            this.$emit('update:title', value);
         },
     },
 };
