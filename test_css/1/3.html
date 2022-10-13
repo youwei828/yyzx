@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* 在标签后面追加内容 */
+            /* p::after {
+                content: 'com';
+                color: antiquewhite;
+                position: relative;
+                top: 30px;
+            }
+            p::before {
+                content: 'com';
+                color: antiquewhite;
+                position: relative;
+                top: 30px;
+            } */
+            div {
+                border: 1px solid salmon;
+                width: 180px;
+            }
+            div > input[type='text'] {
+                width: 120px;
+                border: none;
+                outline: none;
+            }
+            div > input[type='text'] + span::after {
+                content: '\293D';
+                font-size: 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <!-- <p>ζLorem ipsum dolor</p> -->
+            <div>
+                <input type="text" name="" id="" />
+                <span></span>
+            </div>
+        </div>
+    </body>
+</html>

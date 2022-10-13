@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            input {
+                /* 去掉外边线 */
+                outline: none;
+            }
+            input:disabled {
+                /* background-color: red; */
+                border: 1px solid rgb(155, 170, 155) !important;
+            }
+            /* input:enabled {
+                background-color: greenyellow;
+            } */
+            input:checked + label {
+                color: aquamarine;
+            }
+            input:optional {
+                border: 1px solid green;
+            }
+            input:required {
+                border: 1px solid rgb(88, 58, 58);
+            }
+            /* 验证有效样式 */
+            input:valid {
+                background-color: rgb(164, 198, 28);
+            }
+            /* 验证无效的样式 */
+            input:invalid {
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="#">
+            <input type="text" name="" id="" disabled />
+            <input type="text" name="" id="" />
+            <hr />
+            <input type="radio" name="sex" id="man" />
+            <label for="man">男</label>
+            <input type="radio" name="sex" id="girl" checked />
+            <label for="girl">女</label>
+            <hr />
+            <input type="text" name="" id="" required />
+            <input type="email" class="" />
+            <button>保存</button>
+        </form>
+    </body>
+</html>

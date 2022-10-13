@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            new Promise((resolve, reject) => {
+                console.log('primose');
+                setTimeout(() => {
+                    // 宏任务先进入进程执行，执行中创建微任务resolve
+                    resolve();
+                    console.log('setTimeout');
+                });
+            }).then(
+                value => {
+                    console.log('then');
+                },
+                reason => {}
+            );
+            console.log('主线程');
+        </script>
+    </body>
+</html>

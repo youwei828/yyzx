@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // <pending>
+            console.log(new Promise((resolve, reject) => {}));
+            // <fulfilled>: '成功'
+            console.log(
+                new Promise((resolve, reject) => {
+                    resolve('成功');
+                })
+            );
+            // <rejected>: '失败'
+            // console.log(
+            //     new Promise((resolve, reject) => {
+            //         reject('失败');
+            //     })
+            // );
+            new Promise((resolve, reject) => {
+                resolve();
+                reject();
+            })
+                .then(
+                    value => {
+                        console.log('业务1操作成功');
+                    },
+                    reason => {
+                        console.log('业务1操作失败');
+                    }
+                )
+                .then(
+                    value => {
+                        console.log('业务2操作成功');
+                    },
+                    reason => {
+                        console.log('业务2操作失败');
+                    }
+                );
+        </script>
+    </body>
+</html>

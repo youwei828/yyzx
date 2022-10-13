@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            setTimeout(() => {
+                console.log('setTimeout宏任务4');
+            }, 0);
+            new Promise(resolve => {
+                console.log('promise同步1');
+                resolve();
+            }).then(value => console.log('then.微任务3'));
+            console.log('同步2');
+        </script>
+    </body>
+</html>

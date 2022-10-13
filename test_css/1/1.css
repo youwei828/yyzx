@@ -1,0 +1,95 @@
+h1 + h2 {
+    color: #000;
+}
+h1 ~ h2 {
+    color: #000;
+}
+h1[title^='zyw1'] {
+    color: aliceblue;
+}
+h1[title$='1zyw'] {
+    color: aliceblue;
+}
+h1[title*='1zyw1'] {
+    color: aliceblue;
+}
+h1[title~='zzz zyw'] {
+    color: aliceblue;
+}
+h1[title|='zyw zzz'] {
+    color: aliceblue;
+}
+h1[title|='zyw-zzz'] {
+    color: aliceblue;
+}
+/* 默认状态 */
+a:link {
+}
+/* 点击后 */
+a:visited {
+}
+/* :visited要在hover之前 */
+/* 鼠标移动 */
+a:hover {
+}
+/* 点击发生时 */
+a:active {
+}
+/* 获取焦点时 */
+input:focus {
+}
+input:active {
+}
+/* 触发锚点事件后，执行的css */
+div.target {
+}
+/* 最顶级的伪类元素 */
+:root {
+}
+/* 空元素伪类 */
+li:empty {
+    display: none;
+}
+/* 所有后代里面的第一个元素 */
+article:first-child {
+}
+/* 后代第一个元素，只有一个 */
+article > :first-child {
+}
+/* article第一个h1元素，第一个子元素必须是h1 */
+article h1:first-child {
+}
+
+/* article第一个h1,第一个子元素不一定是h1 */
+article h1:first-of-type {
+}
+/* 和first同理 */
+article:last-child {
+}
+/* 唯一的子元素 空格代表后代*/
+article :only-child {
+}
+/* 子元素唯一的h1 */
+article > h1:only-of-type {
+}
+/* 本身和后代里面的第一个 */
+article :nth-child(1) {
+}
+/* 子元素里面第一个 */
+article > :nth-child(1) {
+}
+/* n代表所有，可以是2n,3n,4n ,odd奇数，even偶数，-n+2代表前两个，n+2代表从第二个开始*/
+ul > li article :nth-child(n) {
+}
+/* 必须是第二个为h1的元素 */
+article h1 :nth-of-type(2) {
+}
+/* 从后往前取 */
+article h1 :nth-last-child(2) {
+}
+/* 限制类型 */
+article h1 :nth-last-of-type(2) {
+}
+/* 排除not() 排除第一个和第三个*/
+article > :nth-child(-n + 3):not(:nth-child(2)):not(:nth-child(3)) {
+}
