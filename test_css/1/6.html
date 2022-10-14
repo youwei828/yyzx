@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            div {
+                /* 背景图片 */
+                background-image: url(../咖啡页面/coffee.jpg);
+                /* 背景裁切，在padding内部 */
+                background-clip: content-box;
+                /* 背景裁切，包括padding */
+                background-clip: padding-box;
+                /* 覆盖边框 */
+                background-clip: border-box;
+                /* 背景不重复 当图片过小时会重复的情况下设置*/
+                background-repeat: no-repeat;
+                /* 也可以做设置水平重复和垂直重复 */
+                background: repeat-x;
+                background: repeat-y;
+                /* 平均分配，不会超出边框 */
+                background-repeat: space;
+                /* 当内容滚动的时候，背景固定 */
+                background-attachment: fixed;
+                /* 背景滚动 */
+                background-attachment: scroll;
+                /* 背景定位 */
+                background-position: bottom left;
+                /* 居中 center*/
+                background-position: 50% 50%;
+                /* 图片填满整个元素，随着界面的变化而变化，适合做大屏图片 */
+                background-size: cover;
+                /* 保证图片完全显示，但是元素区域会暴露出来，有留白 */
+                background-size: contain;
+                /* 可以设置两张背景图，属性设置用,号隔开 */
+                background-image: url(), url();
+                background-position: top left, center;
+                background-repeat: no-repeat, repeat;
+                /* 盒子阴影 水平偏移，垂直偏移，模糊度，颜色*/
+                box-shadow: 0 0 5px rgba(100, 100, 100, 0.2);
+                /* 渐变色 线性渐变*180deg颜色上下排列，平均排列，90deg是颜色左右正序排列，
+                deg是角度单位也可以换成，to right top,用角度控制  */
+                background: linear-gradient(90deg, red, green, blue);
+                /* 标志位 代表从什么位置开始渐变*/
+                background: linear-gradient(90deg, red 50%, green 60%, blue);
+                /* 中间点，设置渐变终点的位置 */
+                background: linear-gradient(90deg, red, 50%, green);
+                /* 径向渐变 at bottom left at设置发散中心 */
+                background: radial-gradient(100px 100px red, green, blue);
+                /* 标识位模仿小太阳 */
+                background: radial-gradient(red 30%, yellow 50%, black 70%);
+                /* 重复线性渐变，实现滚动条 */
+                background: repeating-linear-gradient(90deg, blue, 25px, green 25px, 25px, red 50px);
+                /* 重发径向渐变 */
+                background: repeating-radial-gradient(100px 100px, red, yellow 25px, red 60px);
+            }
+        </style>
+    </head>
+    <body></body>
+</html>

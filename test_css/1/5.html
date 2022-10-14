@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            div {
+                /* 居中效果，上下0，左右自动居中 */
+                margin: 0 auto;
+                /* 上下外边距会合并，会取最大的一个边距 */
+                /*  内边距没有auto  */
+
+                /* double双线 solid 实线  groove立体线 */
+                border: solid 1px red;
+                width: 300px;
+                height: 300px;
+                padding: 20px;
+                /* 不论盒子模型内边距为多少，都是300*300的样式 */
+                box-sizing: border-box;
+                /* 圆角 */
+                border-radius: 30px;
+                /* 轮廓线不占用空间位 */
+                outline-style: double;
+                outline-width: 30px;
+                outline-color: antiquewhite;
+                /* 清除轮廓线例如表单 */
+                outline: none;
+                /* 元素的显示控制 */
+                /* 隐藏 会导致空间位丢失*/
+                display: none;
+                /* 变成块元素 */
+                display: block;
+                /* 变成行级块元素 */
+                display: inline-block;
+                /* 文本行 */
+                display: inline;
+                /* 同样是隐藏，空间位保留 */
+                visibility: hidden;
+                /* 类似于透明度变为0 */
+                opacity: 0;
+                /* 当内容撑开盒子的时候产生滚动条 */
+                overflow: scroll;
+                /* 自动，根据内容 */
+                overflow: auto;
+                /* 溢出隐藏 */
+                overflow: hidden;
+                /* 文本变成一行,禁止自动换行 */
+                white-space: nowrap;
+                /* 超出内容变成... */
+                text-overflow: ellipsis;
+                /* max-width 最大宽度，最大高度，最小宽度，最小高度*/
+                /* 最小高度将小于目标高度的元素变为目标高度 */
+                /* 最大高度，将大于目标高度的元素变为目标高度 */
+                min-height: 300px;
+                /* 自定义填充空间，不占用padding */
+                width: -webkit-fill-available;
+                height: -webkit-fill-available;
+                /* 宽度自适应内容 */
+                width: -moz-fit-content;
+                width: fit-content;
+                /* 盒子根据内容自适应尺寸，在父级设置应用在子级 */
+                width: max-content;
+                height: min-content;
+            }
+        </style>
+    </head>
+    <body></body>
+</html>

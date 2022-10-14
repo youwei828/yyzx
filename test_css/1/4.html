@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* 权重
+                规则             粒度
+                ID               0100
+                class,类属性      0010
+                标签，伪类         0001
+                *                  0000
+                行内样式         1000
+
+                =======
+                继承没有权重  NULL
+                *    0000
+                *>继承
+            */
+            @font-face {
+                /* 自定义字体名字 */
+                font-family: 'ziti';
+                /* format()字体类型 otf woff ttf */
+                src: url() format('opentype');
+            }
+            div {
+                /* 字体倾斜 或者em标签 */
+                font-style: italic;
+                /* 小型大写 */
+                font-variant: small-caps;
+                /* 正常大写 */
+                text-transform: uppercase;
+                /* 首字母大写 */
+                text-transform: capitalize;
+                /* 下划线或者u标签 */
+                text-decoration: underline;
+                /* 上划线 */
+                text-decoration: overline;
+                /* 删除线 */
+                text-decoration: line-through;
+                /* 去除下划线 */
+                text-decoration: none;
+                /* 文字阴影  颜色 水平偏移 垂直偏移 模糊量*/
+                text-shadow: #ddd 5px 5px;
+                /* 空白处理，格式化输出 */
+                white-space: pre;
+                /* 不换行,溢出屏幕 */
+                white-space: nowrap;
+                /* 溢出屏幕数据隐藏 */
+                overflow: hidden;
+                /* 将隐藏的数据变成... */
+                text-overflow: ellipsis;
+                /* 文本缩进 */
+                font-size: 20px;
+                text-indent: 2em;
+                /* 水平对齐 left right center */
+                text-align: center;
+                /* 垂直对齐top middle bottom  -30px */
+                vertical-align: top;
+                /* 字符间隔 */
+                letter-spacing: 20px;
+                /* 单词间隔 */
+                word-spacing: 30px;
+                /* 从左到右竖向排列  lr  rl*/
+                writing-mode: vertical-lr;
+                /* 正常排版 */
+                writing-mode: horizontal-tb;
+            }
+        </style>
+    </head>
+</html>
+
+<body></body>
