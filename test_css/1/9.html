@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            body {
+                padding: 50px 400px;
+            }
+            .field {
+                text-align: center;
+
+                position: relative;
+            }
+            /* input没有不能追加伪元素 */
+            input {
+                border: none;
+                outline: none;
+                width: 300px;
+                text-align: center;
+            }
+            .field::after {
+                content: '';
+                background: linear-gradient(to right, red, green, blue);
+                height: 1px;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+            .field:hover:before {
+                position: absolute;
+                content: attr(data-help);
+                top: -30px;
+                /* 必须要有宽度才能居中 */
+                width: 100%;
+                text-align: center;
+                display: block;
+                /* left: 120px; */
+            }
+        </style>
+        <div class="field" data-help="请输入xxxxxxx"><input type="text" /></div>
+    </body>
+</html>

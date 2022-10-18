@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            caption {
+                /* 设置标题位置 */
+                caption-side: bottom;
+            }
+            table {
+                /* 调整单元格间距 */
+                /* border-spacing: 2px; */
+                /* 线条合并 */
+                border-collapse: collapse;
+                /* 隐藏空列 */
+                empty-cells: hide;
+            }
+            table,
+            td {
+                border: 1px #ddd solid;
+            }
+        </style>
+    </head>
+    <body>
+        <table border="1">
+            <thead>
+                <!-- 表格的标题 -->
+                <caption>
+                    这是标题
+                </caption>
+                <tr>
+                    <td>编号</td>
+                    <td>标题</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>有为青年有为青年</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>2</td>
+                    <td>一生编程一生编程</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

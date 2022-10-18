@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                margin: 100px;
+            }
+            article {
+                width: 450px;
+                height: 200px;
+                border: 2px solid darkcyan;
+                overflow: scroll;
+            }
+            section {
+                margin-bottom: 100px;
+            }
+            h2 {
+                /* 不是同级的情况会把上一级的顶走 */
+                position: sticky;
+                /* 粘性定位需要设置定位位置 */
+                top: 0;
+                background-color: aqua;
+            }
+            section:nth-of-type(2n) h2 {
+                background-color: rgb(65, 65, 166);
+            }
+        </style>
+        <main>
+            <article>
+                <section>
+                    <h2>lorem</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta porro accusamus velit neque, ut
+                        cumque, ab aliquid molestias tempore qui culpa? Exercitationem vitae atque deserunt
+                        reprehenderit voluptatibus voluptates natus voluptas.
+                    </p>
+                </section>
+                <section>
+                    <h2>lorem</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta porro accusamus velit neque, ut
+                        cumque, ab aliquid molestias tempore qui culpa? Exercitationem vitae atque deserunt
+                        reprehenderit voluptatibus voluptates natus voluptas.
+                    </p>
+                </section>
+                <section>
+                    <h2>lorem</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta porro accusamus velit neque, ut
+                        cumque, ab aliquid molestias tempore qui culpa? Exercitationem vitae atque deserunt
+                        reprehenderit voluptatibus voluptates natus voluptas.
+                    </p>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>

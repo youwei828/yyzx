@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            main {
+                border: 3px #ddd solid;
+                margin: 0 auto;
+                width: 500px;
+                padding: 10px;
+            }
+            .red {
+                background-color: red;
+                width: 200px;
+                height: 200px;
+                float: left;
+            }
+            .blue {
+                background-color: blue;
+                width: 200px;
+                height: 200px;
+                float: right;
+            }
+            /* 清除浮动的两种方式
+            第一种直接在父元素里面最后一个元素位置添加块元素，不设置内容，添加clear: both;属性
+            第二种，在父元素后面使用伪元素::after内容设置为空，设置成块元素，添加clear: both;属性
+            第三种，overflow触发BFC清除浮动影响,BFC父级计算高度的时候算上浮动元素
+            */
+            /* .clearfix {
+                clear: both;
+            } */
+
+            /* main::after {
+                content: '';
+                display: block;
+                clear: both;
+            } */
+            main {
+                height: auto;
+                overflow: hidden;
+            }
+        </style>
+        <main>
+            <div class="red"></div>
+            <div class="blue"></div>
+            <!-- <div class="clearfix"></div> -->
+        </main>
+    </body>
+</html>

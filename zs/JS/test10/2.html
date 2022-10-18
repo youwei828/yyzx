@@ -33,8 +33,6 @@
                 if (left + 10 >= 300) {
                     clearInterval(timeId);
                     interval(timeId => {
-                        let width = parseInt(window.getComputedStyle(div).width);
-                        div.style.width = width - 10 + 'px';
                         if (width <= 30) {
                             clearInterval(timeId);
                         }

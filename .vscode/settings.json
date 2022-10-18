@@ -12,5 +12,6 @@
     "workbench.list.smoothScrolling": true,
     "window.autoDetectColorScheme": false,
     "debug.allowBreakpointsEverywhere": true,
-    "debug.showBreakpointsInOverviewRuler": true
+    "debug.showBreakpointsInOverviewRuler": true,
+    "cSpell.words": ["composables", "reslove", "todos"]
 }

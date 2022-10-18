@@ -1,0 +1,55 @@
+main {
+    border: 2px black solid;
+    height: auto;
+    margin: 0 auto;
+    width: 1020px;
+    overflow: hidden;
+    padding: 10px;
+    // 第一栏
+    article:nth-of-type(1) {
+        overflow: hidden;
+        .left {
+            height: 200px;
+            width: 500px;
+            background-color: antiquewhite;
+            float: left;
+        }
+        .right {
+            height: 200px;
+            width: 500px;
+            background-color: antiquewhite;
+            float: right;
+        }
+    }
+
+    // 第二栏
+    article:nth-of-type(2) {
+        overflow: hidden;
+        margin-top: 10px;
+        .ad {
+            height: 300px;
+            width: 200px;
+            background-color: dodgerblue;
+            float: left;
+        }
+        .shop {
+            width: 820px;
+            height: 300px;
+            background-color: coral;
+            float: left;
+
+            ul {
+                overflow: hidden;
+                li {
+                    list-style-type: none;
+                    float: left;
+                    display: block;
+                    width: 200px;
+                    height: 230px;
+                    background-color: aqua;
+                    margin: 5px;
+                }
+            }
+        }
+    }
+}

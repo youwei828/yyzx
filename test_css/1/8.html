@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            ul {
+                /* 列表样式，数值类型 */
+                list-style-type: decimal;
+                /* 清除列表样式 */
+                list-style-type: none;
+                /* 渐变色的样式 */
+                list-style-image: linear-gradient(45deg, red, yellow);
+            }
+            /* 追加元素 */
+            span {
+                position: relative;
+                cursor: pointer;
+            }
+            span:hover::after {
+                position: absolute;
+                content: attr(data-title);
+                color: aqua;
+                border: 3px #ddd double;
+                box-shadow: 0 0 5px red;
+                cursor: pointer;
+                padding: 0px;
+                left: 0px;
+                top: 40px;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <span data-title="一生编程">有为青年</span>
+    </body>
+</html>

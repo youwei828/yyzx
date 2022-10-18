@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            div {
+                /* 元素环绕方式，有padding margin content border */
+                shape-outside: margin-box;
+                /* 元素形状的控制 变成圆型   大小，圆心位置*/
+                clip-path: circle(30% at top);
+                /* 内容环绕圆形 */
+                shape-outside: circle(30%);
+                /* 变成椭圆 */
+                clip-path: ellipse(30% 20%);
+                /* 根据点位调整元素显示的形状，例如三个点的等边三角形 */
+                clip-path: polygon(50% 0, 100% 100%, 0 100%);
+                /* 自定义形状环绕 */
+                shape-outside: polygon(50% 0, 100% 100%, 0 100%);
+                /* 内容围绕图片环绕 有透明度的png图片 */
+                shape-outside: url(image.png);
+            }
+        </style>
+    </body>
+</html>
