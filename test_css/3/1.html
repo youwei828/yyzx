@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>栅格</title>
+    </head>
+    <style>
+        article {
+            border: 1px blueviolet solid;
+            height: 300px;
+            width: 300px;
+            /* 将元素转化为栅格排列 */
+            display: grid;
+            /* 行 */
+            /* grid-template-rows: 50% 50%; */
+            grid-template-rows: repeat(2, 50%);
+            /* 列 */
+            /* grid-template-columns: 20% 20% 20% 20% 20%; */
+            grid-template-columns: repeat(5, 20%);
+            /* 4行 重复两边绘制第一行100px,第二行50px
+            grid-template-rows: repeat(2, 100px 50px);
+            */
+            /* 自动填充 */
+            grid-template-columns: repeat(auto-fill, 100px);
+            grid-template-rows: repeat(auto-fill, 100px);
+            /* 平均分配 每一份等比例*/
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            /* 按比例划分 */
+            grid-template-rows: 1fr 2fr 1fr;
+            grid-template-columns: 1fr 2fr 1fr;
+            /* 最小最大宽度，当宽高发生变化时，始终在某个范围 ,50px-100px之间*/
+            grid-template-rows: repeat(2, minmax(50px, 100px));
+            /* 使用栅格的方式控制间距 */
+            /* 行间距 */
+            row-gap: 10px;
+            /* 列间距 */
+            column-gap: 10px;
+            /* 统一设置行列 */
+            gap: 10px 20px;
+            /* 排列方式  默认行排列row  列排列column */
+            grid-auto-flow: row;
+            /* 后面的元素自动填满 栅格流动方向  强制填满*/
+            grid-auto-flow: row dense;
+        }
+        div {
+            background-color: blueviolet;
+            box-sizing: border-box;
+            background-clip: content-box;
+            border: 1px blueviolet solid;
+            padding: 10px;
+        }
+    </style>
+    <body>
+        <article>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </article>
+    </body>
+</html>

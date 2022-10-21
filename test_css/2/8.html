@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                margin: 100px;
+            }
+            article {
+                width: 450px;
+                height: 200px;
+                border: 2px solid darkcyan;
+                overflow: scroll;
+            }
+
+            h2 {
+                /* 是同一级的情况下会覆盖上一级 */
+                position: sticky;
+                /* 粘性定位需要设置定位位置 */
+                top: 0;
+                background-color: aqua;
+            }
+            h2:nth-of-type(2n) {
+                background-color: rgb(65, 65, 166);
+            }
+        </style>
+        <main>
+            <article>
+                <h2>lorem</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta porro accusamus velit neque, ut
+                    cumque, ab aliquid molestias tempore qui culpa? Exercitationem vitae atque deserunt reprehenderit
+                    voluptatibus voluptates natus voluptas.
+                </p>
+
+                <h2>lorem</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta porro accusamus velit neque, ut
+                    cumque, ab aliquid molestias tempore qui culpa? Exercitationem vitae atque deserunt reprehenderit
+                    voluptatibus voluptates natus voluptas.
+                </p>
+
+                <h2>lorem</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta porro accusamus velit neque, ut
+                    cumque, ab aliquid molestias tempore qui culpa? Exercitationem vitae atque deserunt reprehenderit
+                    voluptatibus voluptates natus voluptas.
+                </p>
+            </article>
+        </main>
+    </body>
+</html>

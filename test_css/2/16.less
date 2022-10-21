@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body {
+    background-color: aliceblue;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    main {
+        flex: 1;
+        background-color: rgb(247, 242, 242);
+    }
+    footer {
+        height: 50px;
+        background-color: #eee;
+        display: flex;
+
+        section {
+            flex: 1;
+            border-right: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+            text-align: center;
+            &:last-child {
+                border-right: none;
+            }
+            display: flex;
+            flex-direction: column-reverse;
+            // justify-content: space-between;
+
+            h4 {
+                // 调整h4的基准高度，使其与底部的footer一样高
+                flex: 0 0 50px;
+
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                cursor: pointer;
+            }
+            ul {
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                margin: 5px;
+                display: flex;
+                flex-direction: column;
+                li {
+                    height: 45px;
+                    border-bottom: 1px solid #ccc;
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    cursor: pointer;
+                }
+                display: none;
+            }
+            &:hover > ul {
+                display: flex;
+            }
+        }
+    }
+}

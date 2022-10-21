@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=`" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            main {
+                height: 100vh;
+                background-color: beige;
+            }
+            footer {
+                height: 120px;
+                width: 100vw;
+                position: fixed;
+                bottom: 0;
+                background-color: aquamarine;
+                border-top: solid 3px black;
+            }
+            footer div {
+                box-sizing: border-box;
+                float: left;
+                width: 33.3333%;
+                height: 100%;
+                font-size: 80px;
+                font-weight: 600;
+                text-align: center;
+            }
+            footer div:nth-child(n + 1) {
+                border-right: 3px solid black;
+            }
+        </style>
+        <main></main>
+        <footer>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </footer>
+    </body>
+</html>

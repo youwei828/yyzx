@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>参考点</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 300px;
+            border: 2px yellowgreen solid;
+            transform-style: preserve-3d;
+            transform: perspective(900px) rotateX(45deg) rotateY(35deg);
+        }
+        div {
+            background-color: indianred;
+            width: 100px;
+            height: 100px;
+            transition: 1s;
+            /* 2d旋转参考点 倾斜同理 */
+            /* 左上角x0% y0% 右下角x100% y100% 超过100就会以元素外边的点旋转*/
+            transform-origin: 100% 100% 100px;
+        }
+        main:hover div {
+            transform: rotateY(360deg);
+        }
+    </style>
+    <body>
+        <main>
+            <div></div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <title>扇形菜单</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body {
+            background-color: pink;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav {
+            width: 200px;
+            height: 200px;
+            background-color: lightgreen;
+            position: relative;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        nav > h4 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        nav:hover ul {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        ul {
+            transition: 0.5s;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            width: 300px;
+            height: 300px;
+            /* background-color: lightgreen; */
+            position: relative;
+            /* border: solid 2px black; */
+        }
+        li {
+            color: whitesmoke;
+            position: absolute;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            background-color: slategrey;
+            font-size: 3em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 1s;
+            /* 参考点要在元素上面加 */
+            transform-origin: 150px 150px;
+        }
+        li span {
+            transition: 1s;
+        }
+        ul:hover li:nth-child(1) {
+            transform: rotate(40deg);
+        }
+        ul:hover li:nth-child(1) span {
+            transform: rotate(320deg);
+        }
+        ul:hover li:nth-child(2) {
+            transform: rotate(80deg);
+        }
+        ul:hover li:nth-child(2) span {
+            transform: rotate(280deg);
+        }
+        ul:hover li:nth-child(3) {
+            transform: rotate(120deg);
+        }
+        ul:hover li:nth-child(3) span {
+            transform: rotate(240deg);
+        }
+        ul:hover li:nth-child(4) {
+            transform: rotate(160deg);
+        }
+        ul:hover li:nth-child(4) span {
+            transform: rotate(200deg);
+        }
+        ul:hover li:nth-child(5) {
+            transform: rotate(200deg);
+        }
+        ul:hover li:nth-child(5) span {
+            transform: rotate(160deg);
+        }
+        ul:hover li:nth-child(6) {
+            transform: rotate(240deg);
+        }
+        ul:hover li:nth-child(6) span {
+            transform: rotate(120deg);
+        }
+        ul:hover li:nth-child(7) {
+            transform: rotate(280deg);
+        }
+        ul:hover li:nth-child(7) span {
+            transform: rotate(80deg);
+        }
+        ul:hover li:nth-child(8) {
+            transform: rotate(320deg);
+        }
+        ul:hover li:nth-child(8) span {
+            transform: rotate(40deg);
+        }
+        ul:hover li:nth-child(9) {
+            transform: rotate(360deg);
+        }
+        ul:hover li:nth-child(9) span {
+            transform: rotate(0deg);
+        }
+    </style>
+    <body>
+        <nav>
+            <h4>有为青年</h4>
+            <ul>
+                <li>
+                    <span><i class="fa fa-home" aria-hidden="true"></i></span>
+                </li>
+                <li>
+                    <span><i class="fa fa-align-right" aria-hidden="true"></i></span>
+                </li>
+                <li>
+                    <span><i class="fa fa-hand-rock-o" aria-hidden="true"></i></span>
+                </li>
+                <li>
+                    <span><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+                </li>
+                <li>
+                    <span><i class="fa fa-sun-o" aria-hidden="true"></i></span>
+                </li>
+                <li>
+                    <span><i class="fa fa-audio-description" aria-hidden="true"></i></span>
+                </li>
+                <li>
+                    <span><i class="fa fa-file-text-o" aria-hidden="true"></i></span>
+                </li>
+                <li>
+                    <span><i class="fa fa-apple" aria-hidden="true"></i></span>
+                </li>
+                <li>
+                    <span><i class="fa fa-angle-up" aria-hidden="true"></i></span>
+                </li>
+            </ul>
+        </nav>
+    </body>
+</html>

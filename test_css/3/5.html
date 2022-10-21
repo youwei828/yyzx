@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            footer {
+                width: 200px;
+                border: 2px solid #aaa;
+                height: 80px;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                /* 控制栅格的排列方式 */
+
+                justify-content: space-evenly;
+                align-content: center;
+                /* 一行定义 先垂直后水平  只设一个表示两个都相同 */
+                place-content: center space-evenly;
+                /* gap: 10px; */
+                /* 栅格里内容的定义，默认拉伸 在未设置宽高时使用*/
+                justify-items: stretch;
+                align-items: stretch;
+                /* 简写 先垂直后水平*/
+                place-items: start end;
+            }
+            div {
+                background-color: aquamarine;
+                /* margin: 5px; */
+                height: 50px;
+                padding: 10px;
+                box-sizing: border-box;
+                background-clip: content-box;
+                border: 2px solid gold;
+            }
+            /* 独立控制栅格内某个元素 */
+            div:first-child {
+                /* 水平 */
+                justify-self: center;
+                /* 垂直 */
+                align-self: center;
+                /* 简写 先垂直后水平、*/
+                place-self: center start;
+            }
+        </style>
+        <footer>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </footer>
+    </body>
+</html>

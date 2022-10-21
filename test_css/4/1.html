@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        main {
+            border: 2px slategrey solid;
+            box-sizing: border-box;
+            width: 300px;
+            height: 300px;
+            margin-left: 100px;
+            margin-top: 100px;
+            position: relative;
+        }
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* margin-top: -50px;
+            margin-left: -50px; */
+            /* 使用transform将元素居中 相当于margin的效果*/
+            transform: translate(-50%, -50%);
+            height: 100px;
+            width: 100px;
+            transition: 1s;
+        }
+        div:nth-child(1) {
+            background-color: aqua;
+            /* 控制二维移动 在原来基础上*/
+            /* transform: translateX(200px); */
+            /* 透视 旋转 */
+            transform: perspective(900px) rotateY(45deg);
+        }
+        div:nth-child(2) {
+            background-color: forestgreen;
+            transform: perspective(900px) rotateY(45deg) translate3d(0%, 0%, 0px);
+        }
+        main:hover div:nth-child(2) {
+            /* 百分号是在元素的父元素尺寸基础上 z轴不能使用尺寸*/
+            transform: translateY(-100px) translateX(-100px);
+            /* 简写 X Y */
+            transform: translate(-100px, -100px);
+            /* z轴 */
+            transform: perspective(900px) rotateY(45deg) translate3d(100%, 100%, 200px);
+            /* 倾斜 X Y */
+            transform: skew(-45deg, 45deg);
+        }
+    </style>
+    <body>
+        <main>
+            <div></div>
+            <div></div>
+        </main>
+    </body>
+</html>

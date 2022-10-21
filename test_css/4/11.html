@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>3d盒子</title>
+    </head>
+    <style>
+        * {
+            padding: 0;
+            height: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: whitesmoke;
+            background-color: rgb(139, 137, 137);
+            padding: 10px;
+            position: relative;
+        }
+        main {
+            transform: skew(15deg);
+        }
+        a::before {
+            content: '';
+            bottom: -5px;
+            position: absolute;
+            left: -10px;
+            height: 100%;
+            background-color: black;
+            width: 10px;
+            transform: skewY(-45deg);
+        }
+        a::after {
+            content: '';
+            bottom: -10px;
+            position: absolute;
+            left: -10px;
+            width: 100%;
+            background-color: black;
+            height: 10px;
+            left: -5px;
+            transform: skewX(-45deg);
+        }
+    </style>
+    <body>
+        <main>
+            <a href="">Zhang Youwei</a>
+        </main>
+    </body>
+</html>

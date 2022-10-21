@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+        }
+        li {
+            display: flex;
+            flex-direction: column;
+            margin-left: 50px;
+            width: 100px;
+            text-align: center;
+            border: 2px solid saddlebrown;
+            height: 28px;
+        }
+        strong {
+            background-color: rgb(152, 251, 152, 0.5);
+            cursor: pointer;
+        }
+
+        a {
+            background-color: rgba(123, 81, 137, 0.212);
+            color: whitesmoke;
+            text-decoration: none;
+        }
+        aside {
+            display: flex;
+            flex-direction: column;
+            transform: scale(0);
+            /* 动画基线 */
+            transform-origin: top;
+            transition: 0.5s;
+        }
+        li:hover strong + aside {
+            transform: scale(1);
+        }
+    </style>
+    <body>
+        <ul>
+            <li>
+                <strong>帮助</strong>
+                <aside><a href="">PHP</a><a href="">PHP</a><a href="">PHP</a></aside>
+            </li>
+            <li>
+                <strong>帮助</strong>
+                <aside><a href="">PHP</a><a href="">PHP</a><a href="">PHP</a></aside>
+            </li>
+        </ul>
+    </body>
+</html>

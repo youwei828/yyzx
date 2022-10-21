@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>新年贺卡</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: grey;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main {
+            background-color: tomato;
+            width: 200px;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* transform: rotateX(30deg) rotateY(30deg); */
+        }
+        div {
+            transform-style: preserve-3d;
+            transform: perspective(900px);
+            height: 100%;
+            width: 100%;
+            color: antiquewhite;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div::after,
+        div::before {
+            position: absolute;
+            background-color: rgb(165, 42, 42);
+            height: 100%;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 1s;
+        }
+        div::before {
+            content: '新年';
+            left: 0;
+            top: 0;
+            transform-origin: left;
+            border-right: solid red 2px;
+            box-sizing: border-box;
+        }
+        div::after {
+            box-sizing: border-box;
+            right: 0;
+            top: 0;
+            border-left: solid red 2px;
+            content: '快乐';
+            transform-origin: right;
+        }
+        div:hover::before {
+            content: '';
+            transform: rotateY(-180deg);
+            opacity: 0.5;
+        }
+        div:hover::after {
+            transform: rotateY(180deg);
+            content: '';
+            opacity: 0.5;
+        }
+    </style>
+    <body>
+        <main>
+            <div>有为青年</div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css" />
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: beige;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        body::after {
+            position: absolute;
+            content: '一生编程';
+            color: rgb(156, 137, 137);
+            font-size: 2em;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.4;
+        }
+        main {
+            flex: 1;
+            position: relative;
+        }
+        nav {
+            background-color: gray;
+            height: 8vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        a {
+            flex: 1;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: whitesmoke;
+            font-size: 0.9em;
+        }
+        a:nth-child(2) {
+            border-left: 1px #ddd solid;
+            border-right: 1px #ddd solid;
+        }
+        main > div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* 使得div全部往上走，消失 */
+            transform: translateY(-100%);
+            transition: 1s;
+            z-index: 2;
+        }
+        /* 字体图标的设置一定要加上类条件选择器 */
+        i[class^='fa'] {
+            font-size: 8em;
+            color: white;
+        }
+        /* 一定要加上target 引起锚点事件 */
+        main :nth-child(1):target {
+            background-color: aquamarine;
+        }
+        main :nth-child(2):target {
+            background-color: blueviolet;
+        }
+        main :nth-child(3):target {
+            background-color: coral;
+        }
+        main > div:target {
+            transform: translateY(0px);
+        }
+    </style>
+    <body>
+        <main>
+            <div id="video"><i class="fa fa-video-camera" aria-hidden="true"></i></div>
+            <div id="home"><i class="fa fa-home" aria-hidden="true"></i></div>
+            <div id="help"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></div>
+        </main>
+        <nav>
+            <a href="#video">video</a>
+            <a href="#home">home</a>
+            <a href="#help">help</a>
+        </nav>
+    </body>
+</html>

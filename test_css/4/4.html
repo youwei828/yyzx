@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            main {
+                width: 300px;
+                height: 300px;
+                margin: 100px;
+                border: 2px solid black;
+                box-sizing: border-box;
+                position: relative;
+                transform: perspective(900px) rotateY(45deg);
+            }
+            div {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                transition: 1s;
+                /* overflow: hidden; */
+                box-sizing: border-box;
+            }
+            div:nth-child(1) {
+                background-color: teal;
+            }
+            div:nth-child(2) {
+                height: 100px;
+                /* width: 2px; */
+                background-color: yellowgreen;
+                /* 根据某个轴进行缩放  X  Y  Z 数值为倍数 */
+                /* Z轴控制的是距离 */
+                transform: translateZ(-300px);
+            }
+            main:hover div:nth-child(2) {
+                transform: scale(2, 2);
+                /* 控制3d */
+                transform: scale3d(2, 2, 1);
+                transform: perspective(900px) rotateY(45deg) scale3d(1, 1, 6);
+            }
+        </style>
+        <main>
+            <div></div>
+            <div></div>
+        </main>
+    </body>
+</html>

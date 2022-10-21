@@ -1,0 +1,25 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    background-color: burlywood;
+    flex: 1;
+}
+footer {
+    
+    display: flex;
+    justify-content: space-evenly;
+    height: 50px;
+
+    background: linear-gradient(to bottom, #fcfcfc, #ccc, #fcfcfc);
+    div {
+        flex: 1;
+        text-align: center;
+        line-height: 2em;
+        &:nth-child(n + 2) {
+            border-left: 2px solid black;
+        }
+    }
+}

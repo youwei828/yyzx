@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            /* top: 50%; */
+            /* left: 50%; */
+            /* transform: translate(-50%, -50%); */
+        }
+        main {
+            top: 200px;
+            margin: 0 auto;
+            width: 300px;
+            height: 300px;
+            border: 2px #ccc solid;
+            position: relative;
+            /* 使元素产生3d效果 能看到z轴方向 */
+            transform-style: preserve-3d;
+            transform: perspective(900px) rotate(-45deg);
+        }
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: orange;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -15%;
+            margin-top: -15%;
+            transition: 0.5s;
+        }
+        main:hover div {
+            /*透视 绕X轴旋转 90旋转90度会消失*/
+            transform: perspective(900px) rotate(180deg);
+            /* 通过向量值来精致三维旋转 x y z 每个轴旋转的度数*/
+            transform: perspective(900px) rotate3d(1, 1, 1, 45);
+            /* 注意属性叠加  transform 属性一个元素只有一个 同名属性会被覆盖 */
+            /* 注意 X Y 轴前后顺序不一样会使元素的形状也不一样 */
+        }
+    </style>
+    <body>
+        <main>
+            <div></div>
+        </main>
+    </body>
+</html>

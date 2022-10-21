@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>倾斜背景</title>
+    </head>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a {
+            color: aliceblue;
+            text-decoration: none;
+            border: 2px orange solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        a::after {
+            z-index: -1;
+            position: absolute;
+            content: '';
+            background-color: orangered;
+            width: 0;
+            height: 100%;
+            transform: skew(45deg);
+            transition: 0.5s;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a:hover::after {
+            width: 200%;
+        }
+    </style>
+    <body>
+        <main>
+            <a href="#">discourse</a>
+        </main>
+    </body>
+</html>

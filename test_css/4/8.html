@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: darkgrey;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h2 {
+            /* display: flex;
+            flex-direction: row; */
+            cursor: pointer;
+        }
+        /* 控制哪个元素旋转要先判断是否是块元素 */
+        strong {
+            transition: 1s;
+            display: inline-block;
+        }
+
+        h2:hover strong:nth-of-type(1) {
+            transform: rotate(360deg);
+        }
+        h2:hover strong:nth-of-type(2) {
+            transform: rotate(-360deg);
+        }
+    </style>
+    <body>
+        <main>
+            <h2><strong>有</strong><strong>为</strong>青年</h2>
+        </main>
+    </body>
+</html>

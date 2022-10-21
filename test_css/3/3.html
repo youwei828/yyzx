@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            article {
+                border: 1px gold solid;
+                display: grid;
+                width: 200px;
+                height: 200px;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+            }
+            div {
+                background-color: aquamarine;
+                /* margin: 10px; */
+                border: 10px solid rgb(255, 255, 255);
+                box-sizing: border-box;
+                background-clip: content-box;
+            }
+            div:first-child {
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+        </style>
+        <article>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </article>
+    </body>
+</html>

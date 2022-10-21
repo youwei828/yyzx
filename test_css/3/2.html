@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        article {
+            width: 300px;
+            height: 300px;
+            display: grid;
+            border: 1px blueviolet solid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            /* gap: 10px; */
+        }
+        div {
+            background-color: blueviolet;
+            background-clip: content-box;
+            padding: 10px;
+            /* 控制某个元素在栅格里的显示位置，根据栅格线的编号 */
+            /* 行开始 */
+            grid-row-start: 2;
+            /* 行结束 */
+            grid-row-end: 4;
+            /* 列开始 */
+            grid-column-start: 1;
+            /* 列结束 */
+            grid-template-columns: 4;
+            /* 也可以使用命名的方式，不过不常用 */
+            /* 偏移量，就是使元素去填充格子 */
+            grid-row-end: span 1;
+            grid-column-end: span 2;
+            /* 栅格线定位简写 */
+            grid-row: 2/4;
+            grid-column: 2/3;
+            /* 简写也可以进行偏移 span1就是占1整行或者列 span就是往后推或者往下推*/
+            grid-row: 1 / span 2;
+            grid-column: 1 / span 2;
+            /* 根据区域进行定位  行开始 列开始 行结束 列结束 */
+            grid-area: 1/1/2/4;
+        }
+    </style>
+    <body>
+        <article>
+            <div></div>
+        </article>
+    </body>
+</html>
