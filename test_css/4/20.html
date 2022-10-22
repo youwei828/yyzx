@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <title>登录注册</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main {
+            height: 100vh;
+            width: 100vw;
+            background-color: thistle;
+            position: relative;
+            transform: perspective(900px);
+            transform-style: preserve-3d;
+            transition: 1s;
+        }
+        /* body:hover main {
+            transform: perspective(900px) rotateY(180deg);
+        } */
+        main.login {
+            transform: perspective(900px) rotateY(0deg);
+        }
+        main.register {
+            transform: perspective(900px) rotateY(180deg);
+        }
+        div {
+            backface-visibility: hidden;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+            color: whitesmoke;
+            text-transform: uppercase;
+        }
+        div:nth-child(1) {
+            background-color: tomato;
+        }
+        div:nth-child(2) {
+            transform: rotateY(180deg);
+            background-color: olivedrab;
+        }
+        nav {
+            position: absolute;
+            left: 50%;
+            top: 90%;
+            transform: translate(-50%);
+        }
+        a {
+            text-decoration: none;
+            font-size: 1.2em;
+            color: whitesmoke;
+            background-color: grey;
+            padding: 5px 10px;
+        }
+        a:nth-child(1) {
+            margin-right: 40px;
+        }
+    </style>
+    <body>
+        <main>
+            <div>login</div>
+            <div>register</div>
+        </main>
+        <nav>
+            <!-- 限制跳转 -->
+            <a href="javascript:;" onclick="change('login')">登录</a>
+            <a href="javascript:;" onclick="change('register')">注册</a>
+        </nav>
+    </body>
+    <script>
+        function change(t) {
+            switch (t) {
+                case 'login':
+                    $('main').removeClass().addClass('login');
+                    break;
+                case 'register':
+                    $('main').removeClass().addClass('register');
+                    break;
+            }
+        }
+    </script>
+</html>

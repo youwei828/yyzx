@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>小心心案例</title>
+    </head>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main {
+            /* border: 2px #aaa solid; */
+            height: 200px;
+            width: 200px;
+            position: relative;
+        }
+        i.fa {
+            position: absolute;
+            font-size: 20px;
+            color: #aaa;
+            transition-duration: 1s;
+            cursor: pointer;
+        }
+        main.heartchange i:nth-child(1) {
+            transform: scale(3);
+            color: red;
+            opacity: 0;
+        }
+        main.heartchange i:nth-child(2) {
+            color: red;
+            transform: scale(1);
+            opacity: 1;
+        }
+    </style>
+    <body>
+        <main onclick="heart()">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+        </main>
+        <script>
+            function heart() {
+                $('main').toggleClass('heartchange');
+            }
+        </script>
+    </body>
+</html>

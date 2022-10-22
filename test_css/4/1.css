@@ -1,0 +1,9 @@
+body {
+  padding: 0;
+}
+body div {
+  margin: 0;
+}
+body h1 span a {
+  text-decoration: none;
+}

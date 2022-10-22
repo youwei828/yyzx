@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>过渡</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: lightblue;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main {
+            border: solid 2px khaki;
+            width: 400px;
+            height: 400px;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: turquoise;
+            border: 2px saddlebrown solid;
+            transition: 1s;
+            /* 具体过渡时间 */
+            transition-duration: 1s;
+            /* 限定哪些属性可以过渡 */
+            transition-property: background, height;
+        }
+        main:hover div {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(224, 64, 64);
+            border-radius: 50%;
+        }
+    </style>
+    <body>
+        <main>
+            <div></div>
+            <div></div>
+        </main>
+    </body>
+</html>

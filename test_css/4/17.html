@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>正方体</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: lightslategrey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main {
+            width: 100px;
+            height: 100px;
+            /* border: 2px #aaa solid; */
+            position: relative;
+            transform-style: preserve-3d;
+            transform: perspective(900px) rotateY(50deg) rotateX(50deg);
+            transform-origin: center center 50px;
+            transition: 2s;
+        }
+        body:hover main {
+            transform: perspective(900px) rotateY(500deg) rotateX(500deg);
+        }
+        div {
+            position: absolute;
+            /* left: 50%;
+            top: 50%;
+            margin-left: -50%;
+            margin-top: -50%; */
+            width: 100px;
+            height: 100px;
+            /* background-color: violet; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-origin: center center 50px;
+            opacity: 0.7;
+        }
+        div:nth-child(1) {
+            transform: rotateY(90deg);
+            background-color: aquamarine;
+        }
+        div:nth-child(2) {
+            background-color: rgb(151, 149, 78);
+            transform: rotateY(180deg);
+        }
+        div:nth-child(3) {
+            background-color: rgb(255, 127, 251);
+            transform: rotateY(270deg);
+        }
+        div:nth-child(4) {
+            background-color: rgb(255, 127, 127);
+            transform: rotateY(360deg);
+        }
+        div:nth-child(5) {
+            background-color: rgb(54, 14, 148);
+            transform: rotateX(90deg);
+        }
+        div:nth-child(6) {
+            background-color: rgb(124, 218, 2);
+            transform: rotateX(-90deg);
+        }
+    </style>
+    <body>
+        <main>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </main>
+    </body>
+</html>

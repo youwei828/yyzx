@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: lightslategray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+        main {
+            height: 400px;
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section {
+            width: 200px;
+            height: 100px;
+            border: 2px solid rgb(8, 10, 13);
+            position: relative;
+            overflow: hidden;
+        }
+        div {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            transition-duration: 1s;
+            transition-timing-function: step-start;
+        }
+        img {
+            width: 100%;
+        }
+        /* img:nth-child(1) {
+            transform: translateX(-200px);
+        } */
+        section:hover div:nth-child(2) {
+            transform: translateX(200px);
+        }
+    </style>
+    <body>
+        <main>
+            <section>
+                <div><img src="../img/1.jpg" alt="1" /></div>
+                <div><img src="../img/2.jpg" alt="2" /></div>
+            </section>
+        </main>
+    </body>
+</html>
