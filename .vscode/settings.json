@@ -13,5 +13,20 @@
     "window.autoDetectColorScheme": false,
     "debug.allowBreakpointsEverywhere": true,
     "debug.showBreakpointsInOverviewRuler": true,
-    "cSpell.words": ["composables", "MINGYUE", "reslove", "todos", "Youwei", "Zhang"]
+    "cSpell.words": ["composables", "MINGYUE", "reslove", "todos", "Youwei", "Zhang"],
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "askForPassword": true,
+            "driver": "MySQL",
+            "name": "root",
+            "username": "root",
+            "database": "root"
+        }
+    ]
 }
