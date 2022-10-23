@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>小心心案例</title>
+    </head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: relative;
+            transform: rotate(45deg) scale(0.5);
+            animation-name: scale;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        main::before {
+            content: '';
+            position: absolute;
+            background-color: red;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            transform: translateX(-100px);
+        }
+        main::after {
+            content: '';
+            position: absolute;
+            background-color: red;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            transform: translateY(-100px);
+        }
+        @keyframes scale {
+            25% {
+                transform: rotate(45deg) scale(1);
+            }
+            50% {
+                transform: rotate(45deg) scale(0.5);
+            }
+
+            75% {
+                transform: rotate(45deg) scale(1);
+            }
+            100% {
+                transform: rotate(45deg) scale(0.5);
+            }
+        }
+    </style>
+    <body>
+        <main></main>
+    </body>
+</html>

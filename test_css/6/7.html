@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>按钮上动态的小点</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+            grid-template: 1fr/1fr;
+        }
+        main {
+            justify-self: center;
+            align-self: center;
+        }
+        button {
+            padding: 20px 70px;
+            border: 2px solid #aaa;
+        }
+        button::after {
+            content: '';
+            width: 3px;
+            height: 3px;
+            box-shadow: 3px 0 0 currentColor, 9px 0 0 currentColor, 15px 0 0 currentColor;
+            display: inline-block;
+            animation-name: move;
+            animation-duration: 1s;
+            /* animation-direction: alternate; */
+            animation-iteration-count: infinite;
+        }
+        @keyframes move {
+            0% {
+                box-shadow: none;
+            }
+            33% {
+                box-shadow: 3px 0 0 currentColor;
+            }
+            66% {
+                box-shadow: 3px 0 0 currentColor, 9px 0 0 currentColor;
+            }
+            100% {
+                box-shadow: 3px 0 0 currentColor, 9px 0 0 currentColor, 15px 0 0 currentColor;
+            }
+        }
+    </style>
+    <body>
+        <main>
+            <button>提交</button>
+        </main>
+    </body>
+</html>

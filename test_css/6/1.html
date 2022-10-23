@@ -23,10 +23,24 @@
             height: 100px;
             background-color: antiquewhite;
             /* 帧动画必须要在元素上设定 */
-            /* 根据名字定义 */
-            animation-name: my;
+            /* 根据名字定义 ,多个动画可以直接在后面写,后出现的优先级更高*/
+            animation-name: my, tans;
             /* 整个帧动画的运动时间 */
             animation-duration: 3s;
+            /* 动画执行次数 2就是2遍  可以独立设置 数值数量不够轮询计算*/
+            /* 无限循环  无穷 infinite: ; */
+            animation-iteration-count: 2, 2;
+            /* animation-direction 也可以描述动画的方向 */
+            /* 从0-100 */
+            animation-direction: normal;
+            /* 100-0 */
+            animation-direction: reverse;
+            /* 0-100-0流畅 */
+            animation-direction: alternate;
+            /* 100-0-100流畅 */
+            animation-direction: alternate-reverse;
+            /* 动画状态属性 可以控制动画暂停开始 paused暂停 running开始*/
+            animation-play-state: running;
         }
         /* 定义帧动画 */
         @keyframes yy {

@@ -29,7 +29,9 @@
             width: 100px;
             height: 100px;
             background-color: yellow;
-            animation: yy 5s;
+            /* animation: yy 5s; */
+            animation-name: yy;
+            animation-duration: 5s;
         }
         @keyframes yy {
             25% {
@@ -37,9 +39,17 @@
             }
             50% {
                 transform: translate(300px, 300px);
+                background-color: yellow;
+                border-radius: 0;
             }
             75% {
                 transform: translateY(300px);
+            }
+            /* 某些属性组合写 */
+            25%,
+            75% {
+                border-radius: 50%;
+                background-color: springgreen;
             }
         }
     </style>

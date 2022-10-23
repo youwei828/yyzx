@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>按钮颜色切换</title>
+    </head>
+    <style>
+        .pink {
+            background-color: pink;
+        }
+    </style>
+    <body>
+        <button class="pink">按钮</button>
+        <button>按钮</button>
+        <button>按钮</button>
+        <button>按钮</button>
+        <script>
+            let btns = document.querySelectorAll('button');
+            for (let i = 0; i < btns.length; i++) {
+                btns[i].addEventListener('mouseover', () => {
+                    document.querySelector('.pink').className = '';
+                    btns[i].className = 'pink';
+                });
+            }
+        </script>
+    </body>
+</html>

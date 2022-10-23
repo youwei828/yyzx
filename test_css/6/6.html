@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>微场景</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: lightblue;
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+            grid-template-rows: 10vh 1fr 10vh;
+            color: whitesmoke;
+        }
+        header {
+            background-color: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        main {
+            background: url(../img/4.jpg) no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        main div {
+            width: 80%;
+            height: 40%;
+            opacity: 0.9;
+            border-radius: 10px;
+            color: rgb(26, 26, 26);
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        }
+        main div:nth-child(1) {
+            background-color: lightblue;
+            transform: translateY(-10px);
+        }
+        main div:nth-child(2) {
+            transform: translateY(10px);
+            background-color: steelblue;
+        }
+
+        footer {
+            background-color: lightslategrey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+    <body>
+        <header>明月几时有</header>
+        <main>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto eveniet corrupti fuga illo assumenda
+                dolor ducimus. Sapiente, alias, corrupti repellat ducimus eum quisquam nesciunt
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta et in quaerat iusto officia porro
+                recusandae nihil itaque asperiores, eligendi vitae dolor quasi sint laborum dolorum eum voluptas eaque
+                at!
+            </div>
+        </main>
+        <footer>把酒问青天</footer>
+    </body>
+</html>
