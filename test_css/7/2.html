@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <!-- and判断式 可以一在后面写设备条件判断 -->
+    <style media="screen and (min-width: 768px)"></style>
+    <!-- 逻辑判断 ,逗号代表或者-->
+    <!-- orientation:landscape 横屏设置 -->
+    <style media="screen and (orientation:landscape), screen and (min-width:768px)"></style>
+    <style>
+        /* not否定词要用在最前面 寓意为应用500-768之外的样式 */
+        @media not screen and (min-width: 500px) and (max-width: 768px) {
+            h1 {
+                color: red;
+            }
+        }
+    </style>
+    <!-- only排除低端浏览器，带上的话低端浏览器会忽略媒体查询样式表 -->
+    <body></body>
+</html>

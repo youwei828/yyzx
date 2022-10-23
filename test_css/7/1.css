@@ -1,0 +1,10 @@
+/* @import导入样式 */
+@import url(common.css) all;
+@import url(screen.css) screen;
+@import url(print.css) print;
+/* 屏幕设备并且小于600px时使用的样式 */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: large;
+    }
+}
