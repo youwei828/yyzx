@@ -13,7 +13,7 @@
     "window.autoDetectColorScheme": false,
     "debug.allowBreakpointsEverywhere": true,
     "debug.showBreakpointsInOverviewRuler": true,
-    "cSpell.words": ["composables", "MINGYUE", "reslove", "todos", "Youwei", "Zhang"],
+    "cSpell.words": ["composables", "MINGYUE", "reslove", "todos", "wangwu", "Youwei", "Zhang"],
     "sqltools.connections": [
         {
             "mysqlOptions": {
