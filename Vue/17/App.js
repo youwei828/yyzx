@@ -1,5 +1,5 @@
-import Todo from './component/Todo.js';
-import db from './data/db.js';
+import Todo from './component/Todo.js'
+import db from './data/db.js'
 export default {
     components: {
         //局部标签进行注册
@@ -8,6 +8,6 @@ export default {
     data() {
         return {
             db,
-        };
+        }
     },
-};
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>订单信息表</title>
+    </head>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 60%;
+            text-align: center;
+        }
+        caption {
+            font-size: 1.4em;
+            font-weight: 700;
+        }
+        tr {
+        }
+    </style>
+    <body>
+        <table border="1">
+            <caption>
+                订单付款确认页面
+            </caption>
+            <thead>
+                <tr>
+                    <td>商品名称</td>
+                    <td>商品价格</td>
+                    <td>商品数量</td>
+                    <td>总价</td>
+                    <td>收货地址</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="tr">
+                    <td>name</td>
+                    <td>price</td>
+                    <td>num</td>
+                    <td>sun</td>
+                    <td>address</td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            let tr = document.querySelector('#tr')
+            for (let i = 0; i < tr.children.length; i++) {
+                // console.log(tr.children[i].innerText)
+                let name = prompt(`请输入第${i + 1}条信息`)
+                tr.children[i].innerText = name
+            }
+        </script>
+    </body>
+</html>

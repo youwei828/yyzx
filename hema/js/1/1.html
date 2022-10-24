@@ -2,9 +2,19 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <!-- 解决IE -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- 移动端 -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- SEO标签 -->
+        <!-- title标签 -->
         <title>按钮颜色切换</title>
+        <!-- description -->
+        <meta name="description" content="xxxx" />
+        <!-- Keywords -->
+        <meta name="keywords" content="xxx" />
+        <!-- favicon图标 -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     </head>
     <style>
         .pink {
@@ -17,12 +27,12 @@
         <button>按钮</button>
         <button>按钮</button>
         <script>
-            let btns = document.querySelectorAll('button');
+            let btns = document.querySelectorAll('button')
             for (let i = 0; i < btns.length; i++) {
                 btns[i].addEventListener('mouseover', () => {
-                    document.querySelector('.pink').className = '';
-                    btns[i].className = 'pink';
-                });
+                    document.querySelector('.pink').className = ''
+                    btns[i].className = 'pink'
+                })
             }
         </script>
     </body>

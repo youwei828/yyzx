@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // let age = prompt('请输入你的年龄')
+            // document.write(`我今年${age}岁了
+            // undefined 表示没有赋值
+            // null表示赋值了，但是内容为空
+            // 将null作为尚未创建的对象
+            console.log(null == undefined)
+
+            // 数据类型检测 typeof 变量名
+            let age = 10
+            let str = '10'
+            let bool = true
+            let undefi
+            let obj = null
+            console.log(typeof age) //number
+            console.log(typeof str) //string
+            console.log(typeof bool) //boolean
+            console.log(typeof undefi) //undefined
+            console.log(typeof obj) //object
+            console.log(typeof age + '11') //number11
+            console.log(typeof (age + '11')) //string
+            console.log(typeof (age + +'11')) //number
+            // 类型转换
+            // 因为js是弱数据类型，使用表单、prompt获取过来的数据默认是字符串类型的，此时就不能直接简单的进行加法运算
+            //隐式转换
+            // +就是隐式转换
+            // String + Number   等于String
+            // - * / '10'      等于Number类型10
+            //将+号作为正号来解析可以转化成Number类型
+
+            // 显式转换
+            // 转化为数字类型
+            console.log(Number(str + 1.11)) //101.11
+            //将字符串转化为整数 没有四舍五入
+            console.log(parseInt(str + 1.11)) //101
+            // 转化为数字类型 会保留小数
+            console.log(parseFloat(str + 1.11)) //101.11
+            // 区别:
+            // Number只能放数字字符串，否则返回NaN  NOT A NUMBER
+            console.log(Number('123' + 'abc'))
+            //自动过滤字符串，主要用于过滤单位   123
+            console.log(parseFloat('123' + 'abc'))
+            // 转化为字符类型
+            console.log(age.toString())
+            // 转化为2进制
+            console.log(age.toString(2))
+            // 转化为字符类型
+            console.log(String(age))
+        </script>
+    </body>
+</html>
