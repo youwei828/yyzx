@@ -1,7 +1,7 @@
 {
     "editor.cursorSmoothCaretAnimation": true,
-    "editor.cursorBlinking": "expand",
-    "editor.cursorStyle": "line",
+    "editor.cursorBlinking": "solid",
+    "editor.cursorStyle": "block",
     "editor.cursorSurroundingLinesStyle": "default",
     "files.autoSave": "onFocusChange",
     "editor.renderWhitespace": "selection",
@@ -13,7 +13,15 @@
     "window.autoDetectColorScheme": false,
     "debug.allowBreakpointsEverywhere": true,
     "debug.showBreakpointsInOverviewRuler": true,
-    "cSpell.words": ["composables", "MINGYUE", "reslove", "todos", "wangwu", "Youwei", "Zhang"],
+    "cSpell.words": [
+        "composables",
+        "MINGYUE",
+        "reslove",
+        "todos",
+        "wangwu",
+        "Youwei",
+        "Zhang"
+    ],
     "sqltools.connections": [
         {
             "mysqlOptions": {

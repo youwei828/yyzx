@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>柱形图</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: lightblue;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main {
+            width: 500px;
+            height: 300px;
+            border: 2px #ccc solid;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-end;
+        }
+        div {
+            height: 100px;
+            width: 50px;
+            background-color: pink;
+            text-align: center;
+            position: relative;
+            transition: all 2s;
+        }
+        span {
+            height: 20px;
+            width: 50px;
+            position: absolute;
+            color: rgb(49, 47, 47);
+            font-size: 12px;
+            left: 0%;
+            top: -12%;
+            z-index: 3;
+        }
+    </style>
+    <body>
+        <main>
+            <div><span>第1季度</span></div>
+            <div><span>第2季度</span></div>
+            <div><span>第3季度</span></div>
+            <div><span>第4季度</span></div>
+        </main>
+        <script>
+            let arr = []
+            let one = prompt('请输入第一季度的营收')
+            let two = prompt('请输入第二季度的营收')
+            let thr = prompt('请输入第三季度的营收')
+            let fou = prompt('请输入第四季度的营收')
+            arr.push(one, two, thr, fou)
+            let divs = document.querySelectorAll('div')
+            for (let i = 0; i < divs.length; i++) {
+                // console.log(arr[i])
+                divs[i].style.height = arr[i] + 'px'
+            }
+        </script>
+    </body>
+</html>

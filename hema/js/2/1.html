@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>运算符</title>
+    </head>
+    <body>
+        <script>
+            // +  -  *  /  %取模 当余数为0判断是否别整除
+            // 计算圆形的面积
+            // let r = Number(prompt('请你输入圆的半径'))
+            // let msg = r * r * 3.14
+            // document.write(msg)
+            // console.log(msg)
+            let i = 1
+            // console.log(++i)
+            // console.log(i)
+            // console.log(i++)
+            // console.log(i)
+            // console.log(i++ + ++i + i)
+            // // 字符串使用ascii码比较
+            // console.log('t' > 'a')
+            // 小数比较有精度问题
+            // 比较运算符有隐式转换
+
+            // 逻辑短路 只存在&&和||之中，当满足一定条件就短路
+            // &&         左边为false就短路
+            // ||         左边为true就短路
+            // 先&&后||
+            // 原因：通过左边能得到整个式子的结果，因此没必要在判断右边
+            // 有6个值为false
+            //  0  null  ''  undefined  false  NAN
+            console.log(false && 1)
+            console.log(true && 1)
+            console.log(false || 1)
+            console.log(true || 1)
+        </script>
+    </body>
+</html>

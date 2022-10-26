@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>数组增删改查</title>
+    </head>
+    <body>
+        <script>
+            let arr = [0]
+            // arr.push(将一个或者多个元素添加到末尾，并返回该数组的新长度)
+            arr.push(1, 2, 3)
+            console.log(arr)
+            // arr.unshift(新增到最前面，将一个或者多个元素添加到前面，并返回该数组的新长度)
+            arr.unshift(4, 4)
+            console.log(arr)
+            // arr.pop()  弹出最后一个,并返回该元素的值
+            let p = arr.pop()
+            console.log(p)
+            console.log(arr)
+            // arr.shift()  删除第一个元素，并返回该元素的值
+            arr.shift()
+            console.log(arr)
+            // arr.splice(操作的下标，删除的个数)删除指定元素
+            // arr.splice(start,deleteCount)
+            // start起始位置    deleteCount删几个
+            // 单独写start就是一直往后删
+            arr.splice(0, 1)
+            console.log(arr)
+        </script>
+    </body>
+</html>
