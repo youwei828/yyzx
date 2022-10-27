@@ -5,11 +5,11 @@
 </template>
 
 <script setup>
-import useTodo from '../composables/useTodo';
-const { orderBy } = useTodo();
+import useTodo from '../composables/useTodo'
+const { orderBy } = useTodo()
 const order = () => {
-    orderBy.value = orderBy.value == 'asc' ? 'desc' : 'asc';
-};
+    orderBy.value = orderBy.value == 'asc' ? 'desc' : 'asc'
+}
 </script>
 
 <style lang="scss" scoped>
