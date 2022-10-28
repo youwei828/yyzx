@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>猜数字</title>
+    </head>
+    <body>
+        <script>
+            let random = Math.floor(Math.random() * (10 - 0 + 1) + 0)
+            while (true) {
+                let num = Number(prompt('请输入一个数字'))
+                if (num == random) {
+                    document.write('恭喜你猜对了，数字为' + random)
+                    break
+                } else if (num < random) {
+                    alert('猜小了，请重新输入')
+                } else {
+                    alert('猜大了，请重新输入')
+                }
+            }
+        </script>
+    </body>
+</html>

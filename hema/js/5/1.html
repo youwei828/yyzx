@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let person = {
+                name: 'andy',
+                sayHi1: function () {
+                    alert('h1')
+                },
+                sayHi2: () => {
+                    alert('h2')
+                },
+            }
+            // person.sayHi1()
+            // person.sayHi2()
+            let goods = {
+                name: '小米',
+                num: 100012816024,
+                weight: '0.55kg',
+                address: '中国大陆',
+                writename: () => {
+                    document.write(goods.name)
+                },
+                writegoods: () => {
+                    document.write(goods.address)
+                },
+            }
+            // goods.writename()
+            // goods.writegoods()
+            console.log(goods['name'])
+            // 删除
+            delete goods.address
+            console.dir(goods)
+            // 遍历对象
+            // forin
+            for (key in goods) {
+                console.log(goods[key])
+            }
+            // let arr = ['q', 'w', 'e']
+            // for (k in arr) {
+            //     console.log(arr[k])
+            // }
+            let arr = [
+                { name: 'lisi', age: 18 },
+                { name: 'wu', age: 15 },
+                { name: 'ti', age: 28 },
+            ]
+            for (let i = 0; i < arr.length; i++) {
+                console.log(arr[i].age + arr[i].name)
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 常用内置对象
+            // random  生成0-1之间的随机数不包括1  [0,1)
+            // ceil    向上取整
+            // floor   向下取整
+            // max     max找最大数
+            // min     找最小数
+            // pow     幂运算
+            // abs     绝对值
+            console.log(Math.PI)
+            console.log(Math.random())
+            console.log(Math.ceil(1.1)) //向上取整
+            console.log(Math.floor(1.1)) //向下取整
+            console.log(Math.round(1.5)) //round就近取整，如果是负数往大取整
+            console.log(Math.round(1.4))
+            console.log(Math.max(1, 5, 5, 4, 7))
+            console.log(Math.min(1, 5, 5, 4, 7))
+            // 生成5-10之间的随机整数
+            let random = Math.floor(Math.random() * (10 - 5 + 1) + 5)
+            console.log(random)
+            // 封装max 到 min之间的随机数
+            function getRandom(max, min) {
+                let random = Math.floor(Math.random() * (max - min + 1) + min)
+                return random
+            }
+            // 随机点名
+            let arr = ['lisa', 'yom', 'jack', 'davy', 'lu', 'bin', 'tom']
+            let i = Math.floor(Math.random() * (6 - 0 + 1) + 0)
+            document.write(arr[i] + '<hr/>')
+            arr.splice(i, 1)
+            document.write(arr)
+        </script>
+    </body>
+</html>
