@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>tab栏</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main {
+            height: 65%;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px #aaa solid;
+            padding: 10px;
+        }
+        nav {
+            height: 10%;
+        }
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+        li {
+            height: 100%;
+            background-color: rgb(104, 102, 102);
+            margin-left: 15px;
+            border-radius: 5px;
+            color: aliceblue;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.5s;
+        }
+        li:hover {
+            color: rgb(36, 38, 34);
+            background-color: darkgray;
+        }
+        article {
+            height: 90%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            /* border: 1px red solid; */
+        }
+        aside {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        .display {
+            display: block;
+        }
+    </style>
+    <body>
+        <main>
+            <nav>
+                <ul>
+                    <li>this is 1</li>
+                    <li>this is 2</li>
+                    <li>this is 3</li>
+                    <li>this is 4</li>
+                </ul>
+            </nav>
+            <article>
+                <aside class="display">
+                    <img src="./images/1.jpg" alt="" />
+                </aside>
+                <aside>
+                    <img src="./images/2.jpg" alt="" />
+                </aside>
+                <aside>
+                    <img src="./images/3.jpg" alt="" />
+                </aside>
+                <aside>
+                    <img src="./images/4.jpg" alt="" />
+                </aside>
+            </article>
+        </main>
+        <script>
+            let li = document.querySelectorAll('li')
+            let aside = document.querySelectorAll('aside')
+            for (let i = 0; i < li.length; i++) {
+                li[i].addEventListener('click', () => {
+                    document
+                        .querySelector('.display')
+                        .classList.remove('display')
+                    aside[i].classList.add('display')
+                })
+            }
+        </script>
+    </body>
+</html>
