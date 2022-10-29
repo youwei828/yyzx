@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>购物车加减</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+        main {
+            height: 100px;
+            width: 250px;
+            border: 2px #ddd solid;
+            display: flex;
+        }
+        div {
+            width: 70%;
+            border-right: 2px #ddd solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+        }
+        article {
+            width: 30%;
+            height: 50%;
+        }
+        button {
+            border: none;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:nth-child(2) {
+            border-top: 2px #ddd solid;
+        }
+        button:hover {
+            background-color: rgba(187, 187, 187, 0.564);
+        }
+        button:disabled {
+            background-color: rgb(126, 126, 126);
+        }
+    </style>
+    <body>
+        <main>
+            <div>1</div>
+            <article>
+                <button>+</button>
+                <button disabled>-</button>
+            </article>
+        </main>
+        <script>
+            let div = document.querySelector('div')
+            let button1 = document.querySelector('button:nth-child(1)')
+            let button2 = document.querySelector('button:nth-child(2)')
+
+            button1.addEventListener('click', () => {
+                div.innerHTML++
+                button2.disabled = false
+            })
+            button2.addEventListener('click', () => {
+                div.innerHTML--
+                if (div.innerHTML <= 1) {
+                    button2.disabled = true
+                }
+            })
+        </script>
+    </body>
+</html>
