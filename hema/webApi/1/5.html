@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>用户统一协议</title>
+    </head>
+    <body>
+        <textarea name="" id="" cols="30" rows="10">
+            用户协议
+    欢迎使用，在使用过程中xxxxxxxxxxxxxxxxxxxxxxxxxxx
+    thank you
+        </textarea>
+        <br />
+        <button disabled>同意协议60s</button>
+        <script>
+            let btn = document.querySelector('button')
+            let i = 60
+            let sid = setInterval(() => {
+                i--
+                btn.disabled = true
+                btn.innerHTML = `同意协议${i}s`
+                if (i == -1) {
+                    clearInterval(sid)
+                    btn.disabled = false
+                    btn.innerHTML = `同意协议`
+                }
+            }, 300)
+        </script>
+    </body>
+</html>

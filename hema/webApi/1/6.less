@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    article {
+        height: 250px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        aside {
+            background-color: red;
+            height: 80%;
+            overflow: hidden;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        div {
+            background-color: rgba(16, 16, 15, 0.5);
+            flex: 1;
+            color: greenyellow;
+            font-size: 16px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            h2 {
+                margin-left: 20px;
+            }
+        }
+    }
+}

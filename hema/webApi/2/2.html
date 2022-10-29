@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>下拉菜单案例</title>
+    </head>
+    <body>
+        <style>
+            body {
+                height: 100vh;
+                width: 100vw;
+                /* background-color: lightblue; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                padding: 0;
+            }
+            main {
+                position: relative;
+            }
+            input {
+                outline: none;
+                height: 30px;
+                width: 200px;
+                border: 1px solid #ccc;
+                font-size: 14px;
+            }
+            ul {
+                border: 1px solid #ccc;
+                position: absolute;
+                /* left: -30px;
+                top: 20px; */
+                list-style: none;
+                display: none;
+            }
+            li {
+                padding-right: 30px;
+            }
+            .border {
+                border: 1px solid rgb(172, 84, 17);
+            }
+        </style>
+        <main>
+            <input type="text" name="" id="" />
+            <ul>
+                <li>小米手机123</li>
+                <li>小米手机123</li>
+                <li>小米手机123</li>
+                <li>小米手机123</li>
+                <li>小米手机123</li>
+                <li>小米手机123</li>
+            </ul>
+        </main>
+        <script>
+            let input = document.querySelector('input')
+            let ul = document.querySelector('ul')
+            input.addEventListener('focus', () => {
+                ul.style.display = 'block'
+                ul.classList.add('border')
+                input.classList.add('border')
+            })
+            input.addEventListener('blur', () => {
+                ul.style.display = 'none'
+                ul.classList.remove('border')
+                input.classList.remove('border')
+            })
+        </script>
+    </body>
+</html>

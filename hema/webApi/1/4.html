@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        .one {
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            transition: all 1s;
+        }
+        .classname {
+            width: 300px;
+            height: 300px;
+            background-color: lightcoral;
+        }
+    </style>
+    <body>
+        <div class="one"></div>
+        <button>click</button>
+        <script>
+            let button = document.querySelector('button')
+            let div = document.querySelector('div')
+            button.addEventListener('click', () => {
+                // className原来的会被覆盖
+                // div.className = 'one classname'
+                // classList不会覆盖
+                // add追加   remove移除   toggle切换
+                // add不会覆盖之前的
+                // div.classList.add('classname')
+                // 移除某个类名
+                // div.classList.remove('one')
+                // 切换 0  13iio
+                jklk
+                div.classList.toggle('classname')
+            })
+        </script>
+    </body>
+</html>

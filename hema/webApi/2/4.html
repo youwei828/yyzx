@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>全选按钮案例</title>
+    </head>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: lightslategrey;
+            font-size: 16px;
+            text-align: center;
+        }
+        table {
+            width: 600px;
+            border-collapse: collapse;
+        }
+        thead {
+            background-color: cyan;
+            font-size: 12px;
+        }
+    </style>
+    <body>
+        <table border="1">
+            <thead>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="" id="all" /><span
+                            >全选</span
+                        >
+                    </td>
+                    <td>商品</td>
+                    <td>商家</td>
+                    <td>价格</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" name="" class="check" /></td>
+                    <td>小米手机</td>
+                    <td>小米</td>
+                    <td>￥199</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" class="check" /></td>
+                    <td>小米手机</td>
+                    <td>小米</td>
+                    <td>￥199</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" class="check" /></td>
+                    <td>小米手机</td>
+                    <td>小米</td>
+                    <td>￥199</td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            let tbcheck = document.querySelectorAll('.check')
+            let maincheck = document.querySelector('#all')
+            let span = document.querySelector('span')
+
+            maincheck.addEventListener('click', () => {
+                for (let i = 0; i < tbcheck.length; i++) {
+                    tbcheck[i].checked = maincheck.checked
+                    // span.innerHTML = '取消'
+                    span.innerHTML = maincheck.checked == true ? '取消' : '全选'
+                }
+            })
+            for (let i = 0; i < tbcheck.length; i++) {
+                tbcheck[i].addEventListener('click', () => {
+                    for (let j = 0; j < tbcheck.length; j++) {
+                        if (tbcheck[j].checked === false) {
+                            maincheck.checked = false
+                            span.innerHTML =
+                                maincheck.checked == true ? '取消' : '全选'
+                            // return是退出当前函数
+                            return
+                        }
+                    }
+                    maincheck.checked = true
+                    span.innerHTML = maincheck.checked == true ? '取消' : '全选'
+                })
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>点击消失</title>
+    </head>
+    <body>
+        <style>
+            main {
+                width: 300px;
+                height: 300px;
+                margin: 200px auto;
+                /* border: 2px #ddd solid; */
+                position: relative;
+            }
+            .display {
+                display: none;
+            }
+            aside {
+                width: 30px;
+                height: 30px;
+                background-color: beige;
+                position: absolute;
+                left: -30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: all 0.5s;
+            }
+            aside:hover {
+                background-color: red;
+            }
+            div:nth-child(2) {
+                background-color: khaki;
+                width: 200px;
+                height: 200px;
+                position: absolute;
+            }
+        </style>
+        <main>
+            <aside>X</aside>
+            <div></div>
+        </main>
+        <script>
+            let aside = document.querySelector('aside')
+            let div = document.querySelector('div')
+            aside.addEventListener('click', () => {
+                div.classList.add('display')
+                aside.classList.add('display')
+            })
+        </script>
+    </body>
+</html>

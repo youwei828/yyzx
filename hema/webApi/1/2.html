@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            div {
+                width: 100px;
+                height: 50px;
+                border: 2px #ccc solid;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.5em;
+            }
+            button {
+                border: none;
+                background-color: lightblue;
+                cursor: pointer;
+                transition: all 0.7s;
+            }
+            button:hover {
+                /* background-color: steelblue; */
+                /* color: rgb(255, 255, 255); */
+            }
+        </style>
+        <div class="box"></div>
+        <button class="start">开始随机</button>
+        <button class="stop">抽取（抽过之后将会删除）</button>
+        <script>
+            let arr = ['lisa', 'yom', 'jack', 'davy', 'lu', 'bin', 'tom']
+            let box = document.querySelector('.box')
+            let start = document.querySelector('.start')
+            let stopdel = document.querySelector('.stop')
+
+            // clearInterval(stopid)
+            start.addEventListener('click', () => {
+                stopid = setInterval(() => {
+                    random = Math.floor(Math.random() * (6 - 0 + 1) + 0)
+                    box.innerHTML = arr[random]
+                    start.disabled = true
+                }, 100)
+            })
+            stopdel.addEventListener('click', () => {
+                clearInterval(stopid)
+                start.disabled = false
+
+                arr.splice(random, 1)
+            })
+        </script>
+    </body>
+</html>
