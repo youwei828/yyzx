@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <ul></ul>
+        <script>
+            // 父节点
+            // parentNode
+            // 子节点，只有元素节点
+            // children   childNodes返回一个伪数组
+            // 兄弟节点
+            // 下一个兄弟节点   nextElementSibling
+            // 上一个兄弟节点   previousElementSibling
+
+            // 创建节点
+            let li = document.createElement('li')
+            li.innerHTML = 'li'
+            // 追加节点
+            // 父元素.appendChild(要插入的元素)  插入后面
+            document.querySelector('ul').appendChild(li)
+            // 插入前面
+            // 父元素.insertBefore(要插入的元素，在那个元素前面)
+        </script>
+    </body>
+</html>

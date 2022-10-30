@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <h1 style="">hello</h1>
+        </div>
+        <button>click</button>
+        <script>
+            // 克隆节点
+            // 元素.cloneNode(布尔值)
+            // 括号内为true，则代表克隆时包含后代节点一起克隆
+            // 若为false，则代表克隆时不包含后代节点,不包含内容节点，但是有属性节点
+            // 默认为false
+            var h1 = document.querySelector('h1')
+            // // clone = h1.cloneNode(true)
+            // // console.log(clone)
+            // clone = h1.cloneNode(false)
+            // console.log(clone)
+
+            // 删除节点，必须经过父元素
+            // 父元素.removeChild(要删除的元素)
+            // 如果不存在则删除不成功
+            // 删除节点和隐藏节点(display:none)有区别：隐藏节点还是存在的，但是删除，则是从html中删除节点
+            let button = document.querySelector('button')
+            button.addEventListener('click', () => {
+                let div = document.querySelector('div')
+                // 直接删除元素
+                // div.removeChild(div.children[0])
+                // 隐藏元素
+                div.children[0].style.display = 'none'
+            })
+        </script>
+    </body>
+</html>

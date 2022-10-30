@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div></div>
+        <script>
+            let div = document.querySelector('div')
+            let last = new Date('2022-11-01 01:00:00')
+            function geiTime() {
+                let date = new Date()
+                let millisecond = +last - +date
+                let totalSecond = millisecond / 1000
+                let hour = parseInt((totalSecond / 60 / 60) % 24)
+                hour = hour < 10 ? `0${hour}` : `${hour}`
+                let minutes = parseInt((totalSecond / 60) % 60)
+                minutes = minutes < 10 ? `0${minutes}` : `${minutes}`
+                let second = parseInt(totalSecond % 60)
+                second = second < 10 ? `0${second}` : `${second}`
+                div.innerHTML = `${hour}:${minutes}:${second}`
+            }
+            geiTime()
+            setInterval(() => {
+                geiTime()
+            }, 1000)
+        </script>
+    </body>
+</html>

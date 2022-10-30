@@ -8,14 +8,18 @@
     </head>
     <style></style>
     <body>
-        <img src="../js/5/images/course01.png" alt="" />
         <button>点击</button>
+        <input type="text" name="" id="" />
     </body>
     <script>
-        let img = document.querySelector('img')
         let btn = document.querySelector('button')
-        btn.addEventListener('click', () => {
-            img.src = '../js/5/images/course02.png'
+        btn.addEventListener('click', e => {
+            console.log(123)
+            e.target.blur()
         })
+
+        btn.onkeypress = function (e) {
+            e.preventDefault()
+        }
     </script>
 </html>

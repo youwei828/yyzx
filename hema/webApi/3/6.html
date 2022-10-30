@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>时间对象</title>
+    </head>
+    <body>
+        <script>
+            // 获取当前系统的时间
+            // 首先实例化,获取当前系统的时间
+            let date = new Date()
+            console.log(date)
+            // 获取指定时间,括号里可以选定某个时间，但是要按照格式写
+            let last = new Date('2022-11-01 12:00:00')
+            console.log(last)
+            // 因为获取的时间对象返回的数据格式不可以直接使用，需要转化实际开的格式
+
+            // 获取年份
+            let year = date.getFullYear()
+            console.log(year)
+            // 获得月份取值为0~11 月要加1
+            let month = date.getMonth()
+            console.log(month + 1)
+            // 获取月份的每一天，不同的月份，29|30|31
+            let nowdate = date.getDate()
+            console.log(nowdate)
+            //获取星期 取值0~6  星期日为0
+            let day = date.getDay()
+            console.log(day)
+            // 获取小时
+            let hour = date.getHours()
+            console.log(hour)
+            // 获取分钟
+            let minutes = date.getMinutes()
+            console.log(minutes)
+            // 获取秒
+            let second = date.getSeconds()
+            console.log(second)
+            // 页面事件如果有空白一秒，可以先调用写入函数，然后再进行定时器写入
+
+            // 时间戳
+            // 一种特殊的时间计量方式，是一种特殊的计量时间的方式  1970-01-01 00:00到现在的毫秒数
+            // 获取时间戳的三种方式
+            console.log(date.getTime())
+            console.log(last.getTime())
+            console.log(last.getTime() - date.getTime())
+
+            // 第二种使用隐式转换
+            console.log(+date)
+            console.log(+last)
+            console.log(+last - +date)
+
+            // 第三种  只能得到当前时间的时间戳
+            console.log(Date.now())
+        </script>
+    </body>
+</html>
