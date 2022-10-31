@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    // box-sizing: border-box;
+}
+body {
+    height: auto;
+    width: 100vw;
+    // background: url(../../2/images/3.jpg) no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    main {
+        // border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        section:nth-child(1) {
+            margin-top: 20px;
+        }
+    }
+    section:nth-child(2) {
+        .text-black {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            textarea {
+                resize: none;
+                outline: none;
+                border-radius: 5px;
+                border: 2px #ddd solid;
+                transition: all 0.5s;
+                font-family: '微软雅黑';
+                &:hover {
+                    border: #3498db 2px solid;
+                }
+                &::placeholder {
+                    color: #3498db;
+                }
+            }
+            .submit {
+                margin-left: auto;
+                span {
+                    strong {
+                        color: red;
+                        font-weight: 400;
+                    }
+                }
+                button {
+                    background-color: rgba(255, 127, 80, 0.5);
+                    width: 80px;
+                    font-size: 15px;
+                    color: #2c3e50;
+                    cursor: pointer;
+                    transition: all 0.8s;
+                    &:hover {
+                        color: #130f40;
+                        font-size: 18px;
+                        background-color: rgba(52, 152, 219, 0.5);
+                    }
+                }
+            }
+        }
+    }
+    article {
+        margin-top: 40px;
+        width: 50%;
+        height: auto;
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            li {
+                border: 1px solid #0a3d62;
+                padding: 5px;
+                margin: 10px 0;
+                height: auto;
+                width: 100%;
+                .list-group {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    position: relative;
+                    .profile {
+                        position: relative;
+                        .circle {
+                            position: absolute;
+                            width: 95px;
+                            height: 95px;
+                        }
+                        .scenarios {
+                            position: absolute;
+                            width: 95px;
+                            height: 95px;
+                            border-radius: 50%;
+                        }
+                        img {
+                            position: relative;
+
+                            width: 90px;
+                            height: 90px;
+                        }
+                    }
+                    .item {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-left: 20px;
+                        margin-bottom: 30px;
+                        flex-direction: column;
+                        position: relative;
+                        .lasttime {
+                            transform: translateX(60px);
+                            font-size: 16px;
+                            color: rgb(47, 46, 46);
+                            margin-bottom: 5px;
+                        }
+                        .content {
+                            font-family: '微软雅黑';
+                        }
+                        > span {
+                            position: absolute;
+                            font-size: 16px;
+                        }
+                    }
+                    > span {
+                        position: absolute;
+                        left: 97.5%;
+                        top: 0;
+                        width: 25px;
+                        height: 25px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #808e9b;
+                        cursor: pointer;
+                        transition: all 0.5s;
+                        &:hover {
+                            background-color: #fc5c65;
+                            color: #2f3542;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
