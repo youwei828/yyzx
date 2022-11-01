@@ -16,6 +16,30 @@ body article {
   width: 500px;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+body article .left {
+  background-color: lightblue;
+  font-size: 1.5em;
+  opacity: 0.6;
+  position: absolute;
+  top: 40%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body article .right {
+  background-color: lightblue;
+  font-size: 1.5em;
+  opacity: 0.6;
+  position: absolute;
+  top: 40%;
+  left: 95%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body article aside {
   background-color: red;

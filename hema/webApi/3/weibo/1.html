@@ -65,37 +65,11 @@
                 document.querySelector('#xx').innerHTML =
                     textarea.value.trim('').length
             })
-            textarea.addEventListener('keydown', function (e) {
-                if (e.keyCode == '13') {
-                    value = textarea.value.trim('')
-                    if (!value) return
-                    let nowdate = new Date()
-                    let value_sum = value.length
-                    // e.target.blur()
+            textarea.addEventListener('keyup', function (e) {
+                if (e.key == 'Enter') {
+                    // 回车自动点击
+                    button.click()
                     textarea.value = ''
-                    document.querySelector('#xx').innerHTML = 00
-                    let li = document.createElement('li')
-                    let random = Math.floor(Math.random() * (21 - 0 + 1) + 0)
-                    li.innerHTML = `
-                <div class="list-group">
-                            <div class="profile">
-                                <img src=${dataArr[random].imgSrc}/>
-                            </div>
-                            <div class="item">
-                                <span>${dataArr[random].uname}</span>
-                                <div class="lasttime">${nowdate.getFullYear()}.${
-                        nowdate.getMonth() + 1
-                    }.${nowdate.getDate()} ${nowdate.getHours()}:${nowdate.getMinutes()}:${nowdate.getSeconds()}</div>
-                                <div class="content">${value}</div>
-                            </div>
-                            <span class='del'>X</span>
-                        </div>
-                `
-                    ul.insertBefore(li, ul.children[0])
-                    let spanx = li.querySelector('.del')
-                    spanx.addEventListener('click', () => {
-                        li.style.display = 'none'
-                    })
                 }
             })
             button.addEventListener('click', function (e) {
@@ -105,6 +79,7 @@
                 let value_sum = value.length
                 // e.target.blur()
                 textarea.value = ''
+                textarea.innerHTML = ''
                 document.querySelector('#xx').innerHTML = 00
                 let li = document.createElement('li')
                 let random = Math.floor(Math.random() * (21 - 0 + 1) + 0)

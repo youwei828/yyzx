@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>事件对象</title>
+    </head>
+    <body>
+        <button>按钮</button>
+        <script>
+            // e参数就是 事件对象
+            // type 当前事件类型
+            // clientX,Y  跟页面窗口大小有关，页面变化的话，数值也会变
+            // pageX,Y   跟页面大小无关，跟整个文档有关
+            // offsetX,Y 获取光标对于当前DOM元素左上角的位置
+            // key 用户点击键盘的值
+            // 现在不提倡使用keyCode
+
+            let button = document.querySelector('button')
+            button.addEventListener('click', e => {})
+        </script>
+    </body>
+</html>
