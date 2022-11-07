@@ -1,0 +1,4 @@
+外网面板地址: http://47.100.17.71:13359/ff3c098e
+内网面板地址: http://172.24.10.148:13359/ff3c098e
+username: xmctae4n
+password: abf8ddd9
