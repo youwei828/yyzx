@@ -2,7 +2,8 @@
 namespace app\controller;
 
 use app\BaseController;
-
+use think\facade\Env;
+use think\facade\Config;
 class Index extends BaseController
 {
     public function index()
@@ -13,5 +14,16 @@ class Index extends BaseController
     public function hello($name = 'ThinkPHP6')
     {
         return 'hello,' . $name;
+    }
+    public function printconfig(){
+        // 获取.env文件的配置项值
+        return Env::get('database.hostname');
+        // 获取database.php的配置项值
+        return Config::get('database.connections.mysql.hostname');
+        // env的优先级高于config，部署之后env文件会被隐藏，自动切换到config
+        // 判断某个值是否存在
+        echo Env::has('database.hostname');
+        echo Config::has('database.connections.mysql.hostname');
+
     }
 }

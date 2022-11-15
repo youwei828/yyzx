@@ -40,5 +40,6 @@
             "username": "root",
             "database": "root"
         }
-    ]
+    ],
+    "cSpell.enableFiletypes": ["!vue"]
 }

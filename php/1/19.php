@@ -20,6 +20,7 @@ $mapUsers  = array_map(function($user){
     return $user;
 },$users);
 print_r($mapUsers);
+echo '<hr/>';
 // 返回函数的值
 $stringUsers = array_map(function($user){
     // 合并字符串
