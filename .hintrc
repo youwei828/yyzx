@@ -18,7 +18,13 @@
         ]
       }
     ],
-    "button-type": "off"
+    "button-type": "off",
+    "axe/language": [
+      "default",
+      {
+        "html-lang-valid": "off"
+      }
+    ]
   },
   "browserslist": [
     "defaults",
