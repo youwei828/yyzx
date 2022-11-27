@@ -15,14 +15,15 @@ abstract class Notify{
     public function credit(){
         return $this->credit;
     }
-
 }
 
 class User extends GlobalNotify{
     // 重写属性或者方法
-    protected $credit = 5;
+    protected $credit = 20;
     public function register(){
-        return $this->message();
+        // return $this->message();
+        // 重写父类方法之前调用父类的方法
+        return parent::message();
     }
 }
 
