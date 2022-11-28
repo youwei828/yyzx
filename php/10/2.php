@@ -32,6 +32,8 @@ try {
     print_r($rows);
     // 有了对象就可以获取其中的值
     echo $rows[0]->title;
-} catch (PDOException $e) {
+} catch (PDOException $e) { 
+
+    
     die($e->getMessage());
 }
