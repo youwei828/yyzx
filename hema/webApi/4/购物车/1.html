@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./1.css" />
+        <title>购物车</title>
+    </head>
+    <body>
+        <div class="all">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <td>
+                            <input
+                                type="checkbox"
+                                name="allGoods"
+                                id="checkAllGoods"
+                            />全选
+                        </td>
+                        <td>商品</td>
+                        <td>原价</td>
+                        <td>商品数量</td>
+                        <td>小计</td>
+                        <td>操作</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="checkbox" class="checkGoods" />
+                        </td>
+                        <td class="goods">
+                            <img src="./images/01.jpg" alt="牛奶" />
+                            <span>牛奶</span>
+                        </td>
+                        <td class="price">5</td>
+                        <td>
+                            <div>
+                                <button>-</button>
+                                <input type="text" value="0" readonly />
+                                <button>+</button>
+                            </div>
+                        </td>
+                        <td class="allPrice">5</td>
+                        <td class="del">删除</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" class="checkGoods" />
+                        </td>
+                        <td class="goods">
+                            <img src="./images/01.jpg" alt="牛奶" />
+                            <span>牛奶</span>
+                        </td>
+                        <td class="price">15</td>
+                        <td>
+                            <div>
+                                <button>-</button>
+                                <input type="text" value="1" readonly />
+                                <button>+</button>
+                            </div>
+                        </td>
+                        <td class="allPrice">5</td>
+                        <td class="del">删除</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" class="checkGoods" />
+                        </td>
+                        <td class="goods">
+                            <img src="./images/01.jpg" alt="牛奶" />
+                            <span>牛奶</span>
+                        </td>
+                        <td class="price">25</td>
+                        <td>
+                            <div>
+                                <button>-</button>
+                                <input type="text" value="2" readonly />
+                                <button>+</button>
+                            </div>
+                        </td>
+                        <td class="allPrice">5</td>
+                        <td class="del">删除</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" class="checkGoods" />
+                        </td>
+                        <td class="goods">
+                            <img src="./images/01.jpg" alt="牛奶" />
+                            <span>牛奶</span>
+                        </td>
+                        <td class="price">35</td>
+                        <td>
+                            <div>
+                                <button>-</button>
+                                <input type="text" value="3" readonly />
+                                <button>+</button>
+                            </div>
+                        </td>
+                        <td class="allPrice">5</td>
+                        <td class="del">删除</td>
+                    </tr>
+                </tbody>
+            </table>
+            <aside>
+                <div class="left">
+                    <span class="delAllGoods">删除所有商品</span>
+                    <span class="clearShopCart">清理购物车</span>
+                </div>
+                <div class="right">
+                    <div class="goodsPrice">
+                        <span class="alreadyCheck"
+                            >已选中<strong>0</strong>件商品</span
+                        >
+                        <span class="totalPrice">总价：<strong>0</strong></span>
+                    </div>
+                    <div class="settleCount">去结算</div>
+                </div>
+            </aside>
+        </div>
+        <script src="./1.js"></script>
+    </body>
+</html>

@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+    .all {
+        width: 90%;
+        height: 80%;
+        table {
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+            text-align: center;
+            tr {
+                border-bottom: 1px solid black;
+                td {
+                    border: none;
+                    div {
+                        input {
+                            width: 40px;
+                            text-align: center;
+                        }
+                        button {
+                            width: 20px;
+                            margin-left: -10px;
+                            margin-right: -10px;
+                        }
+                    }
+                }
+                .goods {
+                    display: flex;
+                    flex-direction: column;
+                    width: 80px;
+                    transform: translateX(60px);
+                }
+                .del {
+                    cursor: pointer;
+                }
+            }
+        }
+        aside {
+            width: 99.7%;
+            margin-top: 1vh;
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .left {
+                font-size: 12px;
+                color: rgb(109, 108, 108);
+                .delAllGoods {
+                    padding: 10px;
+                    cursor: pointer;
+                }
+                .clearShopCart {
+                    padding: 10px;
+                    cursor: pointer;
+                }
+            }
+            .right {
+                width: 40%;
+                display: flex;
+                justify-content: space-between;
+                .goodsPrice {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .alreadyCheck {
+                        color: rgb(128, 128, 128);
+                        strong {
+                            color: red;
+                        }
+                    }
+                    .totalPrice {
+                        color: rgb(128, 128, 128);
+                        strong {
+                            color: red;
+                        }
+                    }
+                }
+                .settleCount {
+                    width: 50px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rebeccapurple;
+                    color: whitesmoke;
+                }
+            }
+        }
+    }
+}

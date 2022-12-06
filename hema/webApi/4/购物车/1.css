@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vh;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25%;
+}
+body .all {
+  width: 90%;
+  height: 80%;
+}
+body .all table {
+  border-collapse: collapse;
+  border: none;
+  width: 100%;
+  text-align: center;
+}
+body .all table tr {
+  border-bottom: 1px solid black;
+}
+body .all table tr td {
+  border: none;
+}
+body .all table tr td div input {
+  width: 40px;
+  text-align: center;
+}
+body .all table tr td div button {
+  width: 20px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+body .all table tr .goods {
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+  transform: translateX(60px);
+}
+body .all table tr .del {
+  cursor: pointer;
+}
+body .all aside {
+  width: 99.7%;
+  margin-top: 1vh;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .all aside .left {
+  font-size: 12px;
+  color: #6d6c6c;
+}
+body .all aside .left .delAllGoods {
+  padding: 10px;
+  cursor: pointer;
+}
+body .all aside .left .clearShopCart {
+  padding: 10px;
+  cursor: pointer;
+}
+body .all aside .right {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+body .all aside .right .goodsPrice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .all aside .right .goodsPrice .alreadyCheck {
+  color: #808080;
+}
+body .all aside .right .goodsPrice .alreadyCheck strong {
+  color: red;
+}
+body .all aside .right .goodsPrice .totalPrice {
+  color: #808080;
+}
+body .all aside .right .goodsPrice .totalPrice strong {
+  color: red;
+}
+body .all aside .right .settleCount {
+  width: 50px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rebeccapurple;
+  color: whitesmoke;
+}
