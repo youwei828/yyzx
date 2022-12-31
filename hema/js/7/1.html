@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function duplicateRemoval(a, b) {
+                let aSet = new Set(a)
+                let bSet = new Set(b)
+                return Array.from(
+                    new Set([...bSet].filter(v => aSet.has(v)))
+                ).sort()
+            }
+
+            let a = [1, 2, 3, 3, 4, 5, 5]
+            let b = [5, 5, 3, 6, 7, 8, 8, 9, 9, 0, 0]
+
+            console.log(duplicateRemoval(a, b))
+        </script>
+    </body>
+</html>
