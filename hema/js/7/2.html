@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Page Title</title>
+    </head>
+    <style>
+        label {
+            user-select: none;
+        }
+    </style>
+    <body>
+        <label for="man">男</label>
+        <input type="text" value="askldfhsadfh" />
+        <input type="radio" name="gender" id="man" value="男" />
+        <label for="woman">女</label>
+        <input type="radio" name="gender" id="woman" value="女" />
+        <button onclick="man.checked = false">click</button>
+        <button onclick="alert(man.getAttribute('checked'))">click</button>
+    </body>
+    <script>
+        let man = document.querySelector('#man')
+        console.log(man.getAttribute('checked'))
+    </script>
+</html>

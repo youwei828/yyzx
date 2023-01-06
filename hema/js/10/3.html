@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>login</title>
+    </head>
+    <body>
+        <div id="root">
+            <h1>请您登录</h1>
+            <form>
+                <input type="text" name="username" id="username" />
+                <input type="password" name="password" id="password" />
+                <button id="login">login</button>
+            </form>
+        </div>
+
+        <div id="loadData"></div>
+        <script>
+            let login = document.getElementById('login')
+            let root = document.getElementById('root')
+            let loadData = document.getElementById('loadData')
+            let button = `<button onclick="load()">loadData</button> <br/> <button onclick="logout()">登出</button>`
+            if (localStorage.getItem('username')) {
+                root.innerHTML = null
+                loadData.insertAdjacentHTML('afterbegin', button)
+            } else {
+                login.addEventListener(
+                    'click',
+                    e => {
+                        let username = document
+                            .getElementById('username')
+                            .value.trim()
+                        let password = document
+                            .getElementById('password')
+                            .value.trim()
+                        let user = { username, password }
+                        let userString = JSON.stringify(user)
+                        e.preventDefault()
+                        let $this = e.target
+                        fetch('https://express.tianzhongli.shop/login', {
+                            method: 'POST',
+                            headers: {
+                                'Content-type': 'application/json',
+                            },
+                            body: userString,
+                        })
+                            .then(result => {
+                                return result.json()
+                            })
+                            .then(result => {
+                                if (result.code == 200) {
+                                    //    登录成功
+                                    username = result.data.username
+                                    root.innerHTML = null
+                                    loadData.innerHTML = button
+                                    localStorage.setItem('username', username)
+                                    return
+                                } else {
+                                    // 登录失败流程
+                                    alert('登录失败')
+                                    root.insertAdjacentHTML(
+                                        'afterbegin',
+                                        `<h1>登录失败，请重新登录</h1>`
+                                    )
+                                }
+                            })
+                            .catch(err => {
+                                console.log(err)
+                            })
+                    },
+                    false
+                )
+            }
+
+            function load() {
+                fetch('https://express.tianzhongli.shop/list')
+                    .then(result => {
+                        return result.json()
+                    })
+                    .then(result => {
+                        let ul = document.createElement('ul')
+                        result.data.forEach(v => {
+                            ul.insertAdjacentHTML(
+                                'beforeend',
+                                `<li>${v.name}--${v.age}--${v.address}</li>`
+                            )
+                        })
+                        loadData.appendChild(ul)
+                    })
+                    .catch(err => {
+                        console.log(err)
+                    })
+            }
+
+            function logout() {
+                localStorage.removeItem('username')
+                location.reload(true)
+            }
+        </script>
+    </body>
+</html>

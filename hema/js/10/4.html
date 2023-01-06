@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // // 老构造函数
+            // function LinkedList(value) {
+            //     this.value = value
+            // }
+            // // 将方法写在构造函数的原型上，在创建实例对象的时候不需要重复创建
+            // LinkedList.prototype.Node = function () {}
+            // LinkedList.prototype.append = function () {}
+            // LinkedList.prototype.removeAt = function () {}
+
+            // // 新的写法
+
+            // class LinkedList2 {
+            //     // 将传进来的值设置为私有属性
+            //     #value
+            //     constructor(value) {
+            //         this.#value = value
+            //     }
+            //     // 直接写方法就可以定义在原型上
+            //     Node() {}
+            //     append() {}
+            //     removeAt() {}
+            // }
+            let obj = {
+                a: {
+                    b: {},
+                },
+            }
+            console.log(obj.a.b.c?.d)
+        </script>
+    </body>
+</html>
