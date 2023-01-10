@@ -2,13 +2,14 @@ let express = require('express')
 let path = require('path')
 let list = require('./routes/list')
 let login = require('./routes/login')
+let test = require('./routes/test')
 let app = express()
 app.use(express.json())
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*')
     res.setHeader('Access-Control-Allow-Methods', '*')
-    res.setHeader('Access-Control-Allow-Headers', '*')
+    res.setHeader('Access-Control-Allow-Headers', 'Content-type,Authorization')
     next()
 })
 
@@ -17,6 +18,8 @@ app.use(express.static(path.resolve(__dirname, './public')))
 app.use(login)
 
 app.use(list)
+
+app.use(test)
 
 let err = `
         <h1>未能找到相关资源</h1>

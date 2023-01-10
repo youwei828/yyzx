@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <button>测试1</button>
+        <button>测试2</button>
+        <button>测试3</button>
+        <script>
+            let button1 = document.querySelectorAll('button')[0]
+            let button2 = document.querySelectorAll('button')[1]
+            let button3 = document.querySelectorAll('button')[2]
+            let controller
+
+            button1.addEventListener('click', () => {
+                controller = new AbortController()
+                fetch('https://express.tianzhongli.shop/test', {
+                    signal: controller.signal,
+                })
+            })
+            button2.addEventListener('click', () => {
+                controller && controller.abort()
+            })
+            button3.addEventListener('click', async () => {
+                try {
+                    let result = await fetch(
+                        'https://express.tianzhongli.shop/test'
+                    )
+                    let data = await result.json()
+                    console.log(data)
+                } catch (error) {
+                    console.log(error)
+                }
+            })
+        </script>
+    </body>
+</html>
