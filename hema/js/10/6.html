@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Page Title</title>
+    </head>
+
+    <body>
+        <script>
+            // let str1 = `你好
+            //  我很好`
+            // let str2 = `{"你好":"我很好"}`
+
+            // // 匹配换行符的正则
+            // let reg = RegExp(/[\s\n]/g)
+
+            // // 使用切割函数
+            // let resultSet = str1.split(reg)
+
+            // console.log(resultSet)
+            // // 取结果集数组第一个
+            // console.log(resultSet.at(0))
+            // // 取结果集数组最后一个
+            // console.log(resultSet.at(-1))
+            // // 最后拼接
+            // let result = `{"${resultSet.at(0)}":"${resultSet.at(-1)}"}`
+            // console.log(result)
+        </script>
+
+        <script>
+            let str1 = '你好\n我很好'
+            let str2 = `{"你好":"我很好"}`
+            console.log(str1)
+
+            // 匹配换行符的正则
+            let reg = RegExp(/[\s\n]/g)
+
+            // 使用切割函数
+            let resultSet = str1.split(reg)
+
+            console.log(resultSet)
+            // 取结果集数组第一个
+            console.log(resultSet.at(0))
+            // 取结果集数组最后一个
+            console.log(resultSet.at(-1))
+            // 最后拼接
+            let result = `{"${resultSet.at(0)}":"${resultSet.at(-1)}"}`
+            console.log(result)
+
+        </script>
+    </body>
+</html>

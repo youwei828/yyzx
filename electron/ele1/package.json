@@ -1,0 +1,28 @@
+{
+    "name": "ele1",
+    "version": "1.0.0",
+    "description": "1",
+    "main": "main.js",
+    "devDependencies": {
+        "electron": "^22.2.0",
+        "nodemon": "^2.0.20"
+    },
+    "scripts": {
+        "start": "nodemon --exec electron ."
+    },
+    "author": "Mingyue",
+    "license": "MIT",
+    "nodemonConfig": {
+        "ext": "html,js,ts,json",
+        "watch": [
+            "*.*"
+        ],
+        "ignore": [
+            "node_modules",
+            "dist"
+        ],
+        "colours": true,
+        "verbose": true,
+        "restartable": "rs"
+    }
+}
